@@ -1,0 +1,284 @@
+
+body {
+    font-family: 'Kadwa', serif;
+    padding: 0;
+    margin: 0;
+}
+
+input[type="date"] {
+    cursor: pointer;
+}
+
+div.contenedor {
+    max-width: 1400 px;
+    margin: 0px auto;
+}
+
+.contenedorHeader {
+    max-width: 1400px;
+    padding: 0px 100px;
+    border: 0px;
+    font-weight: bolder;
+}
+
+header h1 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    margin: 0%;
+    padding: 0px;
+    font-size: 2.5em;
+}
+
+header h1>span {
+    color: #2EB6E1;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 8px;
+    display: flex;
+    place-content: space-between;
+}
+
+header div.contenedor {
+    display: flex;
+    place-content: space-between;
+}
+
+#botonAyuda {
+    border: 2px solid gray;
+    color: gray;
+    font-weight: bolder;
+    border-radius: 3em;
+    font-size: 1em;
+    padding: 0em 1em;
+    display: inline-block;
+}
+
+#botonAyuda:hover {
+    border: 2px solid gray;
+    background: grey;
+    color: white;
+    font-weight: bolder;
+    border-radius: 3em;
+    font-size: 1em;
+    padding: 0em 1em;
+    display: inline-block;
+}
+
+#botonInic {
+    border: 2px solid rgba(46, 182, 225, 1);
+    color: rgba(46, 182, 225, 1);
+    font-weight: bolder;
+    border-radius: 2em;
+    font-size: 1em;
+    padding: 0em 1em;
+    display: inline-block;
+}
+
+#botonInic:hover {
+    border: 2px solid rgba(46, 182, 225, 1);
+    color: white;
+    background: rgba(46, 182, 225, 1);
+    font-weight: bolder;
+    border-radius: 3em;
+    font-size: 1em;
+    padding: 0em 1em;
+    display: inline-block;
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+    padding: 1em;
+}
+
+header li {
+    padding: 1em;
+}
+
+
+
+.contenderPanelPrincipal {
+    background-image: url(./imagenes/fernando-tavora-jN8wERXCnkE-unsplash.jpg);
+    background-size: cover;
+    background-position-y: -80px;
+    background-repeat: no-repeat;
+    padding-top: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+/*************inicio cajas***********/
+.cajaInvisible{   
+    background: #ffffff3d;
+    border-radius: 25px;
+    padding: 1.1EM;
+    
+}  
+
+.panelViaje {
+    width: min-content;
+    padding: 0px 15px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border-radius: 20px;
+    gap: 8px;
+    margin: 0px;
+}
+
+.caja {
+    padding: 0px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(105, 105, 105);
+}
+.caja input{
+    background: #FFFFFF;
+    box-shadow: -1px -1px 10px 6PX rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    border: #FFFFFF;
+    padding: .5em;
+}
+
+.caja h2 {
+    padding-left: 15%;
+    text-align: left;
+    font-size: 2em;
+}
+
+.caja1 {
+    grid-column: 1 / 4;
+    align-items: left;
+    padding-left: 0px;
+}
+
+.caja2 {
+    grid-column: 4 / 7;
+    padding-top: 10%;
+}
+.caja3 {
+    grid-column: 1/7;
+    padding: 3%;
+}
+
+/**fin cajas**/
+
+#botonPasaje {
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    background: #2EB6E1;
+    border: 1px solid #1693BB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    color: white;
+    font-weight: bolder;
+    font-size: 1em;
+}
+#botonPasaje:hover {
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    background: #2e8ae1;
+    border: 1px solid #1693BB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    color: white;
+    font-weight: bolder;
+    font-size: 1em;
+}
+
+
+.panelViaje input[type="radio"] {
+    display: none;
+}
+
+.caja2 label {
+    color: #1693BB;
+    margin: -3px;
+    background: rgb(255, 255, 255);
+    padding: 2px 15px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-size: 1em;
+    border: 2px solid #2EB6E1;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#izq{
+    border-radius: 20px 0px 0px 20px; 
+}
+#der{
+    border-radius: 0px 20px 20px 0px;
+}
+
+.caja input[type="radio"]:checked + label {
+    padding: 3px 15px ;
+    background-color: #2EB6E1 ;
+    color: white;
+    font-size: 1.1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* menu hamburguesa */
+/* header div.contenedorHeader {
+    place-content: flex-start;
+}
+
+header div.contenedorHeader nav {
+    width: 70%;
+    display: flex;
+    place-content: space-between;
+}
+
+#menu,
+#menu-check {
+    display: none;
+} */
+
+/* @media only screen and (max-width: 900px) {
+
+    header div.contenedorHeader,
+    header div.contenedorHeader ul,
+    header div.contenedorHeader ul li {
+        display: inline;
+    }
+
+    header div.contenedorHeader nav {
+        width: 100%;
+        display: inline;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    header h1 {
+        margin: 0p;
+    }
+
+    header h1 a {
+        padding: 0px;
+    }
+} */

@@ -1,13 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Proyecto ReservAr</title>
+    <link rel="stylesheet" href="/CSS/estilos.css">
+
+    <!-- google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
+  
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./CSS/imagenes/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./CSS/imagenes/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./CSS/imagenes/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
+
 <body>
-    
+    <header>
+        <div class="contenedor contenedorHeader">
+            <h1>Reserv<span>Ar</span> </h1>
+            <ul>
+                <li>Promociones</li>
+                <li>Mis reservas</li>
+                <li>Información</li>
+            </ul>
+            <ul>
+                <li><a href="#" id="botonAyuda">Centro de ayuda</a></li>
+                <li><a href="#" id="botonInic">Iniciar Sesión </a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="contenedor">
+            <div class="contenderPanelPrincipal">
+                <!-- panel de busqueda de pasaje -->
+                <div class="cajaInvisible">
+                    <div class="panelViaje">
+                        <div class="caja caja1">
+                            <h2>Reserve</h2>
+                        </div>
+
+                        <div class="caja caja2">
+                            <input type="radio" name="cantidad" id="soloIda">
+                            <label for="soloIda" id="izq"> Solo ida</label>
+
+                            <input type="radio" name="cantidad" id="idaVuelta">
+                            <label for="idaVuelta" id="der"> Ida y vuelta</label>
+                        </div>
+
+                        <div class="caja">
+                            <form action="">
+                                <label for="">Origen</label>
+                                <input type="text" name="origen" id="">
+                            </form>
+                        </div>
+                        <div class="caja">
+                            <form action="">
+                                <label for="">Destino</label>
+                                <input type="text" name="destino" id="">
+                            </form>
+                        </div>
+                        <div class="caja">
+                            <form action="">
+                                <label for="">Ida</label>
+                                <input type="date" name="fechaIda" id="">
+                            </form>
+                        </div>
+                        <div class="caja">
+                            <form action="">
+                                <label for="">Vuelta</label>
+                                <input type="date" name="fechaVuelta" id="">
+                            </form>
+                        </div>
+                        <div class="caja">
+                            <form action="">
+                                <label for="">Cantidad</label>
+                                <input type="text" name="cantidad" id="">
+                            </form>
+                        </div>
+                        <div class="caja caja3">
+                            <input type="button" value="Buscar Pasaje" id="botonPasaje">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <aside>
+        <div class="contenedor">
+
+        </div>
+    </aside>
+
+    <footer>
+        <div class="contenedor">
+
+        </div>
+    </footer>
     <script src="./JS/scripts.js"></script>
 </body>
+
 </html>
