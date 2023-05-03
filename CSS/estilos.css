@@ -28,7 +28,7 @@ header div.contenedorHeader {
     display: flex;
     margin: 0px ;
     font-weight: bolder;
-    /max-width: 1500px; 
+    max-width: 1500px; 
     /*padding: 0px 100px; */
     border: 0px;
     place-content: flex-start; 
@@ -506,7 +506,6 @@ header li {
 /*************promociones y top destinos*****************/
 
 .padreProm{
-    font-weight: ;
     display: flex;
     flex-wrap: wrap;
     justify-content: center; 
