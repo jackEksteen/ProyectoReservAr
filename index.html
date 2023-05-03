@@ -21,20 +21,31 @@
 </head>
 
 <body>
+
     <header>
-        <div class="contenedor contenedorHeader">
+        <div class=" contenedorHeader">
             <h1>Reserv<span>Ar</span> </h1>
-            <ul>
-                <li>Promociones</li>
-                <li>Mis reservas</li>
-                <li>Información</li>
-            </ul>
-            <ul>
-                <li><a href="#" id="botonAyuda">Centro de ayuda</a></li>
-                <li><a href="#" id="botonInic">Iniciar Sesión </a></li>
-            </ul>
+
+            <input type="checkbox" id="menuCheck">
+            <label id="menu" for="menuCheck">
+                <span id="menuAbrir"> &#9776; </span>
+                <span id="menuCerrar">X</span>
+            </label>
+
+            <nav>
+                <ul class="menusCambian">
+                    <li><a href="">Promociones</a></li>
+                    <li><a href="">Mis reservas</a></li>
+                    <li><a href="">Información</a></li>
+                </ul>
+                <ul class="menusSuperponen">
+                    <li><a href="#" id="botonAyuda">Centro de ayuda</a></li>
+                    <li><a href="#" id="botonInic">Iniciar Sesión </a></li>
+                </ul>
+            </nav>
         </div>
     </header>
+
     <main>
         <div class="contenedor">
             <!--imagen que tiene el panel de viaje -->
@@ -92,20 +103,20 @@
             </div>
 
 
-            <!-- Cuadrado gris -->
+            <!-- Cuadrado gris  financiacion -->
             <div class="contenedorFin">
-                <div class="subcontenedorFin">
+                <div class="padreFin">
                     <div class="cajaFin item1">
-                        <h1 class="">Financiación</h1>
+                        <h3 class="">Financiación</h3>
                     </div>
-                    <div class="cajaFin ">
+                    <div class="cajaFin cajaBancos">
                         <img src="./CSS/imagenes/visa.png" class="logo">
                     </div>
-                    <div class="cajaFin ">
+                    <div class="cajaFin  cajaBancos">
                         <img src="./CSS/imagenes/MasterCard_early_1990s_logo.png" class="logo">
                     </div>
-                    <div class="cajaFin ">
-                        <img src="./CSS/imagenes/unnamed.png" class="logo">
+                    <div class="cajaFin  cajaBancos">
+                        <img src="./CSS/imagenes/unnamed.png" class="logo santander">
                     </div>
                     <div class="cajaFin">
 
@@ -137,7 +148,9 @@
     <footer class="pie-pagina">
         <div class="grupo-1">
             <div class="box">
-                <a href="#"> <h1>Reserv<span>Ar</span> </h1>  </a>
+                <a href="#">
+                    <h1>Reserv<span>Ar</span> </h1>
+                </a>
             </div>
             <div class="box">
                 <h2>SOBRE NOSOTROS</h2>
