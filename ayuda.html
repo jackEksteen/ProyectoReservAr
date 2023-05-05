@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>login</title>
+    <link rel="stylesheet" href="/CSS/estilos.css">
+
+    <!-- google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./CSS/imagenes/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./CSS/imagenes/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./CSS/imagenes/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
     <header>
@@ -40,5 +53,60 @@
             </nav>
         </div>
     </header>
+
+
+    <h1>CENTRO DE AYUDA</h1>
+    <h3>Si ha tenido algún problema con su reserva y/o pasaje, dejenos sus datos y en la brevedad uno de nuestros asistentes se estará comunicando para solucionar el problema</h3>
+    
+    <section class="contact">
+        <div class="u-wrapper">
+          <div class="contact-content">
+    
+            <form id="form" action="" class="form">
+              <h3 class="tag"><span>Datos del comprador</span></h3>
+              <label for="name">Nombre Completo <span>*</span></label>
+              <input name="name" required type="text" id="name" placeholder="Juan">
+              <label for="email">Correo electrónico <span>*</span></label>
+              <input name="email" type="text" id="email" required placeholder="juan@gmail.com">
+              <label for="message">N° de telefono</label>
+              <input name="email" type="text" id="email" required placeholder="ej: 11 1234 5678">
+              <label for="message">Cuentenos su problema</label>
+              <textarea id="message" name="message" id="" cols="30" rows="10"></textarea>
+              <button type="submit" class="btn primary full"></button>
+            </form>
+            <a href="mailto:me@leonidasesteban.com" id="trucazo">jojojoj</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <a href="#">
+                    <h1>Reserv<span>Ar</span> </h1>
+                </a>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+            </div>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2021 <b>Jack</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+
+
+
 </body>
 </html>
