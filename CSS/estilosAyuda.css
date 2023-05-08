@@ -1,7 +1,8 @@
 body {
-    background: #1c92d2;
-    background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);
-    background: linear-gradient(to left, #f2fcfe, #1c92d2);
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
     width: 100%;
     font-family: 'Kadwa', serif;
     padding: 0;
@@ -16,13 +17,17 @@ div.contenedor {
     font-weight: bolder;
 
 }
+a{
+    text-decoration: none;
+}
 /******************Header - Menu Hamburguesa*********************/
 header {
     display: flex;
     place-content: space-between;
     justify-content: center;
     background-color: #FFFFFF;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+    margin-bottom: 5%;
 }
 header p {
     padding: 0 0.5em;
@@ -97,7 +102,6 @@ header li {
 }
 
 /*********mediaqueries header************/
-
 @media only screen and (max-width: 970px) {
     header {
         place-content: flex-start;
@@ -238,9 +242,7 @@ header li {
     }
 }
 
-
 /**para que no se rompan los botones al achicar**/
-
 @media only screen and (max-width: 1300px) and (min-width: 971px) {
     header div.contenedorHeader nav {
         width: 100%;
@@ -427,12 +429,31 @@ header li {
     }
 }
 /***************************************************/
+main{
+    padding: 5% ;
+    display: flex;
+}
 .contenedor{
-    width: 50%;
+    padding: 1%;
+    width: 900px;
+    background-color: rgb(211, 211, 211);
+    box-shadow: -2px 0px 9px rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    text-align: center;
+    min-width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.contenedor h3{
+    padding: 0 5%;
+}
+.contenedor h1 {
+    padding-top: 2%;
+    font-size: 2.5em;;
 }
 .form {
     max-inline-size: 550px;
-    margin: auto;
+    margin:  8% auto;
 }
 .form label {
     display: block;

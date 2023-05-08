@@ -3,17 +3,15 @@ body {
     padding: 0;
     margin: 0;
 }
-
 input[type="date"] {
     cursor: pointer;
 }
-
 div.contenedor {
     max-width: 1400 px;
     margin: 0px auto;
     font-weight: bolder;
-
 }
+a{text-decoration: none;}
 
 /******************Header - Menu Hamburguesa*********************/
 header {
@@ -605,11 +603,11 @@ header li {
 }
 
 .carrusel {
-    width: 25%;
+    width: 30%;
     height: min-content;
-    min-width: 300px;
+min-width: min-content;
     padding: 1.5em;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(241, 241, 241);
     border-radius: 25px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.8);
     margin: 30px;
@@ -632,13 +630,11 @@ header li {
 .textoDestino {
     width: 100%;
     height: 50%;
-    background-color: #ffffff;
 }
 
 .slider-frame {
-    background-color: rgb(255, 255, 255);
     width: 100%;
-    height: 100%;
+height: 800px;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -656,15 +652,16 @@ header li {
     padding: 0;
     width: 400%;
     height: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(241, 241, 241);
     margin: 0;
     animation: slide 20s infinite alternate ease-in-out;
     border-radius: 25px;
+    height: max-content;
 }
 
 .slider-frame li {
     list-style: none;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(241, 241, 241);
     padding: 0;
     width: 100%;
 }
