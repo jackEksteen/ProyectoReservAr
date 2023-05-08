@@ -12,126 +12,53 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
-
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./CSS/imagenes/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./CSS/imagenes/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./CSS/imagenes/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/eaf650e03e.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-<!-- header -->
+    <!-- header -->
     <header>
         <div class=" contenedorHeader">
-            <h1>Reserv<span>Ar</span> </h1>
-
-            <input type="checkbox" id="menuCheck">
-            <label id="menu" for="menuCheck">
-                <span id="menuAbrir"> &#9776; </span>
-                <span id="menuCerrar">X</span>
-            </label>
-
-            <nav>
-                <ul class="menusCambian">
-                    <li><a href="./promociones.html">Promociones</a></li>
-                    <li><a href="./login.html">Mis reservas</a></li>
-                    <li><a href="./informacion.html">Información</a></li>
-                </ul>
-                <ul class="menusSuperponen">
-                    <li>
-                        <a href="/ayuda.html" id="botonAyuda">
-                            <p>Centro de ayuda</p>
-                            <i class="fa-solid fa-question fa-2xl" id="iconHelp"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/login.html" id="botonInic">
-                            <p>Inicia Sesion</p>
-                            <i class="fa-solid fa-user fa-2xl" id="iconUser"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+         <a href="./index.html"><h1>Reserv<span>Ar</span> </h1></a>   
         </div>
     </header>
-<!-- main -->
+    <!-- main -->
     <main>
-
-    <div class="padre">
-        <form action="" id="form"></form>
-         <div class="form">
-            <h1>Registro</h1>
-            <div class="grupo">
-                <input type="text" id="name" name="" required><span class="barra"></span>
-                <label for="">Nombre</label>
-            </div>
-            <div class="grupo">
-                <input type="email" id="email" name="" required><span class="barra"></span>
-                <label for="">Email</label>
-            </div>
-            <div class="grupo">
-                <input type="password" id="password" name="" required><span class="barra"></span>
-                <label for="">password</label>
-            </div>
-            <button type="submit">Ingresar</button>
-
-
+        <div class="padre">
+            <form action="" method="POST" id="form">
+                <div class="form">
+                    <h2>Iniciar Sesión</h2>
+                    <div class="grupo">
+                        <input type="text" name="" id="name" ><span class="barra"></span>
+                        <label for="">Nombre</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="email" name="" id="email" ><span class="barra"></span>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="password" name="" id="password" ><span class="barra"></span>
+                        <label for="">Password</label>
+                    </div>
+                    
+                    <button type="submit">Suscribirte</button>
+                    <p class="warnings" id="warnings"></p>
+                </div>
+            </form>        
         </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
     </main>
-<!-- footer -->
+    <!-- footer -->
     <footer class="pie-pagina">
         <div class="grupo-1">
             <div class="box">
-                <a href="#">
+                <a href="./index.html">
                     <h1>Reserv<span>Ar</span> </h1>
                 </a>
             </div>
@@ -154,7 +81,7 @@
             <small>&copy; 2021 <b>Jack</b> - Todos los Derechos Reservados.</small>
         </div>
     </footer>
-<!-- scripts -->
+    <!-- scripts -->
     <script src="./JS/scripts.js"></script>
 </body>
 

@@ -1,29 +1,41 @@
-:root{
+:root {
     --colorTextos: #49454567;
 }
 
-body {font-family: 'Kadwa', serif; padding: 0; margin: 0; }
-body{
-    background: #1c92d2;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+body {
+    font-family: 'Kadwa', serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #1c92d2;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #f2fcfe, #1c92d2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     width: 100%;
 }
-main{
+
+main {
     display: flex;
     justify-content: center;
     padding: 5%;
     margin-bottom: 100px;
 
 }
-.padre{
+
+.padre {
     height: 600px;
     /* width: 400px; */
     /* padding: 0%; */
 }
-.form h1{
-    text-align: center; 
+
+.form h2 {
+    text-align: center;
 }
+
 .form {
     background-color: white;
     padding: 40px 0;
@@ -32,11 +44,13 @@ main{
     /* width: 100%;
     height: 100%; */
 }
-.form .grupo{
+
+.form .grupo {
     position: relative;
-    margin: 45px ;
+    margin: 45px;
 }
-input{
+
+input {
     background: none;
     color: #c6c6c6;
     font-size: 18px;
@@ -46,11 +60,13 @@ input{
     border: none;
     border-bottom: 1px solid var(--colorTextos);
 }
-input:focus{
+
+input:focus {
     outline: none;
     color: #5e5d5d;
 }
-label{
+
+label {
     color: var(--colorTextos);
     font-size: 16px;
     position: absolute;
@@ -58,40 +74,72 @@ label{
     left: 5px;
     top: 10px;
     transition: 0.5s ease all;
-    pointer-events: none;    
+    pointer-events: none;
 }
+
 input:focus~label,
-input:valid~label{
-    top:-14px;
+input:valid~label {
+    top: -14px;
     font-size: 12px;
     color: #2196f3;
 }
-.barra{
+
+.barra {
     position: relative;
     display: block;
     width: 100%;
 }
-.barra::before{
+
+.barra::before {
     content: "";
     height: 2px;
     width: 0%;
     bottom: 0;
     position: absolute;
-    background: linear-gradient(to left, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to left, #f2fcfe, #1c92d2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     transition: 0.3s ease width;
     left: 0;
 }
-input:focus~.barra::before{
+
+input:focus~.barra::before {
     width: 100%;
+}
+
+button {
+    font-family: 'kadwa';
+    background: #00B4DB;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 80%;
+    border: none;
+    display: block;
+    margin: 10px auto;
+    color: white;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.warnings {
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #b06ab3;
+    padding-top: 20px;
 }
 
 
 
+@media screen and (max-width:500px) {
+    form {
+        width: 80%;
+    }
 
-
-
-
-
+}
 
 
 
@@ -134,372 +182,68 @@ input:focus~.barra::before{
 
 /******************Header - Menu Hamburguesa*********************/
 
-header{
+header {
     display: flex;
-    place-content: space-between;
     justify-content: center;
     background-color: #FFFFFF;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.8);
 }
-header p {
-    padding: 0 0.5em;
+a{
+    text-decoration: none;
+}
+ h1 {
+    color: #000;
+    font-size: 3em;
+    padding: 0;
     margin: 0;
-}
-header div.contenedorHeader {
-    text-align: center;
-    display: flex;
-    margin: 0px ;
-    font-weight: bolder;
-    max-width: 1500px; 
-    /*padding: 0px 100px; */
-    border: 0px;
-    place-content: flex-start; 
-}
-header div.contenedorHeader nav{
-    width: 70%;
-    display: flex;
-    place-content: space-between;
-    background: rgb(255, 255, 255);
-    padding: 0 100px 0 100px;
-    height: 100%;
-}
-#menu, #menuCheck {
-    display: none;
-}
-.contenedorHeader h1 {
-    height: 100%;
-    position: relative;
-    margin: 0;
-    margin: 0%;
-    padding: 0px;
-    font-size: 2.5em;
-    align-items: center;
-    display: flex;
-}
-header div.contenedorHeader nav .menusCambian li:hover{
-    background-color: #efefef;
-    border-bottom: 10px solid #2EB6E1;
-    transition: all 300ms ease;
-
-}
-header div.contenedorHeader nav .menusSuperponen {
-    display: flex;
-    align-items: center;
-    margin-left: 50px;
 }
 header h1>span {
     color: #2EB6E1;
 }
-header ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0px;
-    display: flex;
-    place-content: space-between;
-    
-}
-header a {
-    color: black;
-    text-decoration: none;
-    padding: 1em;
-}
 
-header li {
-    padding: 1em;
-}
-#iconUser {
-    display: none;
-  }
-#iconHelp{
-    display: none;
-  }
-
-/*********mediaqueries header************/
-
-@media only screen and (max-width: 970px){
-    header{
-        place-content: flex-start;
-    }
-    header h1{
-        margin:0;
-    }
-    header h1 a {
-        padding: 0;
-    }
-
-    header div.contenedorHeader{
-        width: 100%;
-        display: flex;
-        place-content: space-between;
-        padding: 0% 10%;
-        align-items: center;
-    }
-    header div.contenedorHeader nav{
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 60%;
-        background: rgb(0, 0, 0);
-        padding-top: 10em;
-        padding-right: 1.5em;
-        opacity: 0.8;
-        color: white;
-        z-index: 999;
-        padding-left: 0;
-        display: flex;
-        place-content: space-between;
-    }
-
-    header div.contenedorHeader nav .menusCambian {
-        opacity: 0.8;
-        color: black;
-        width: 100%;
-    }
-
-     #menuCheck:not(:checked) ~ nav {
-        display: none;
-    }
-    #menuCheck:checked ~ nav {
-        display: block;
-    } 
-    #menu{
-        width: 60px;
-        height: 60px;
-        text-align: center;
-        display: block;
-        color: white;
-        background: #2EB6E1;
-        font-size: 2em;
-        font-weight: bold;
-        border: 1px solid 2EB6E1 ;
-        border-radius: 0.2em;
-        /* margin-top: 1%; */
-       padding: 0;
-        z-index: 9999;
-    }
- 
-    #menu:hover{
-        color: white;
-        background-color: #51c0e2;
-        cursor: pointer;
-    }
-    #menuCerrar{
-        display: none;
-    }
-    #menuCheck:checked ~ label #menuAbrir {
-        display: none;
-    }
-    #menuCheck:checked ~ .caja {
-        display: none;
-    }
-    #menuCheck:checked ~ label #menuCerrar {
-        display: block;
-    }
-
-    header div.contenedorHeader nav ul a{
-        color: white ;
-        padding: 0;
-        margin: 0;
-    }
-    header div.contenedorHeader nav ul a:hover{
-        color: white ;
-        padding: 0;
-        margin: 0;
-    }
-
-    .menusCambian li{
-        width: 92%;
-    }
-    
-    header div.contenedorHeader nav ul, header div.contenedorHeader nav .menusCambian ul li{
-        display: block;
-        text-align: right;
-        font-size: 1.2em;
-        width: 100%;
-    }
-    header div.contenedorHeader nav ul, header div.contenedorHeader nav .menusSuperponen ul li{
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        text-align: right;
-        font-size: 1.2em;
-    }
-
-    header div.contenedorHeader nav .menusSuperponen{
-        display:flex;
-    align-items: end;
-        margin-top: 100px;
-    }
-    header div.contenedorHeader .menusCambian li:hover{
-        background: rgba(180, 180, 180, 0.514);
-        border: 0;
-    }
-}
-
- /**para que no se rompan los botones al achicar**/
- 
- @media only screen and (max-width: 1300px) and (min-width: 971px){
-    header div.contenedorHeader nav{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        font-size: 100%;
-        padding-right: 0;
-        height: 100%;
-        margin-right: 3%;
-        padding-left: 4%;
-    }
-    
-
-    header div.contenedorHeader {
-        display: flex;
-        margin: 0px ;
-        font-weight: bolder;
-        width: 100%;
-        margin-left: 20px;
-       border: 0px;
-       padding-right: 0;
-        place-content: flex-start; 
-        align-items: center;
-    }
-    header div.contenedorHeader nav .menusCambian{
-        display: flex;
-        align-items: center;     
-        padding: 0;
-        height: 100%;
-        width: 100%;
-    }
-    header div.contenedorHeader nav .menusCambian li { 
-        height: 75%;
-        width: 100%;
-        padding-top: 4%;
-    }
-
-    header div.contenedorHeader nav .menusSuperponen{
-        display: flex;
-        padding: 0;
-        width: 20%;
-        justify-content: end;
-    }
-    header a{
-        padding-top: 10px;
-    }
-    header li {
-        padding: 0 0.5em;
-        }
-
-      #iconUser {
-        display: block;
-        padding: 0.6em;
-      }
-      #iconHelp {
-        display: block;
-        padding: 0.6em;
-      }
-
-      #botonAyuda {
-        border: 12px solid gray;
-        color: gray;
-        font-weight: bolder;
-        border-radius: 3em;
-        font-size: 1em;
-        padding: 10em;
-        display: inline-block;
-      }
-    
-      header p {
-        padding: 0;
-        margin: 0;
-        display: none;
-      }
-} 
-
-/********botones header*******/
-#botonAyuda {
-    border: 2px solid gray;
-    color: gray;
-    font-weight: bolder;
-    border-radius: 3em;
-    font-size: 1em;
-    padding: 0em 0em;
-    display: inline-block;
-}
-
-#botonAyuda:hover {
-    border: 2px solid gray;
-    background: grey;
-    color: white;
-    font-weight: bolder;
-    border-radius: 3em;
-    font-size: 1em;
-    padding: 0em 0em;
-    display: inline-block;
-}
-#botonInic {
-    border: 2px solid rgba(46, 182, 225, 1);
-    color: rgba(46, 182, 225, 1);
-    font-weight: bolder;
-    border-radius: 2em;
-    font-size: 1em;
-    padding: 0em 0em;
-    display: inline-block;
-}
-#botonInic:hover {
-    border: 2px solid rgba(46, 182, 225, 1);
-    color: white;
-    background: rgba(46, 182, 225, 1);
-    font-weight: bolder;
-    border-radius: 3em;
-    font-size: 1em;
-    padding: 0em 0em;
-    display: inline-block;
-}
-#iconHelp{
-    color: #808080;
-}
-#iconHelp:hover{
-    color: #fff;
-}
 
 /**********************FOOOTER***********************/
 
-.pie-pagina{
+.pie-pagina {
     width: 100%;
     background-color: #2EB6E1;
     height: min-content;
 }
-.pie-pagina .grupo-1{
+
+.pie-pagina .grupo-1 {
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap:50px;
+    grid-gap: 50px;
     padding: 20px 0px;
 }
 
-.pie-pagina .grupo-1 .box h1{
+.pie-pagina .grupo-1 .box h1 {
     color: #000000;
     margin-bottom: 25px;
     font-size: 50px;
 }
-.pie-pagina .grupo-1 .box h1 span{
+
+.pie-pagina .grupo-1 .box h1 span {
     color: #fff;
     margin-bottom: 25px;
     font-size: 50px;
 }
-.pie-pagina .grupo-1 .box h2{
+
+.pie-pagina .grupo-1 .box h2 {
     color: #fff;
     margin-bottom: 25px;
     font-size: 20px;
 }
-.pie-pagina .grupo-1 .box p{
+
+.pie-pagina .grupo-1 .box p {
     color: #efefef;
     margin-bottom: 10px;
 }
-.pie-pagina .grupo-1 .red-social a{
+
+.pie-pagina .grupo-1 .red-social a {
     display: inline-block;
     text-decoration: none;
     width: 50px;
@@ -512,23 +256,27 @@ header li {
     background-color: #50C6EB;
     border-radius: 5px;
 }
-.pie-pagina .grupo-1 .red-social a:hover{
+
+.pie-pagina .grupo-1 .red-social a:hover {
     color: aqua;
 }
-.pie-pagina .grupo-2{
+
+.pie-pagina .grupo-2 {
     background-color: #50C6EB;
     padding: 15px 10px;
     text-align: center;
     color: #fff;
 }
-.pie-pagina .grupo-2 small{
+
+.pie-pagina .grupo-2 small {
     font-size: 15px;
 }
-@media screen and (max-width:800px){
-    .pie-pagina .grupo-1{
+
+@media screen and (max-width:800px) {
+    .pie-pagina .grupo-1 {
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
-        grid-gap:30px;
+        grid-gap: 30px;
         padding: 35px 0px;
     }
 }
