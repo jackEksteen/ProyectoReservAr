@@ -14,9 +14,9 @@ form.addEventListener("submit", e=>{
         warnings += `El nombre no es valido <br>`
         entrar = true
     }
-    if(!regexEmail.test(email.value)){
+    if(regexEmail.test(email.value)){
         warnings += `El email no es valido <br>`
-        entrar = true
+        alert("email invalido")
     }
     if(pass.value.length < 8){
         warnings += `La contraseña no es valida <br>`

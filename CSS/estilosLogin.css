@@ -1,48 +1,44 @@
 :root {
     --colorTextos: #49454567;
 }
-
 body {
     font-family: 'Kadwa', serif;
     padding: 0;
     margin: 0;
 }
-
 body {
     background: #1c92d2;
-    /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);
-    /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #f2fcfe, #1c92d2);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     width: 100%;
 }
-
 main {
     display: flex;
     justify-content: center;
     padding: 5%;
     margin-bottom: 100px;
-
 }
-
 .padre {
     height: 600px;
-    /* width: 400px; */
-    /* padding: 0%; */
+     width: auto;
+     justify-content: center;
+     display: flex;
+     padding: 0%; 
 }
-
 .form h2 {
     text-align: center;
 }
-
+form{
+    width: 100%;
+}
 .form {
     background-color: white;
     padding: 40px 0;
     box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
     border-radius: 10px;
-    /* width: 100%;
-    height: 100%; */
+    width: 100%;
+    min-width: 500px;
+    text-align: center;
 }
 
 .form .grupo {
@@ -136,7 +132,7 @@ button {
 
 @media screen and (max-width:500px) {
     form {
-        width: 80%;
+        width: 100%;
     }
 
 }
@@ -271,6 +267,9 @@ header h1>span {
 .pie-pagina .grupo-2 small {
     font-size: 15px;
 }
+form a{
+    color: #2196f3;
+}
 
 @media screen and (max-width:800px) {
     .pie-pagina .grupo-1 {
@@ -278,5 +277,15 @@ header h1>span {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 30px;
         padding: 35px 0px;
+    }
+    main{
+        padding: 10% 0;
+    }
+    .form{
+        width: 100%;
+        min-width: 400px;
+    }
+    .padre{
+        width: auto;
     }
 }
