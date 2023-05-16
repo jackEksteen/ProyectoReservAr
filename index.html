@@ -65,56 +65,70 @@
             <div class="contenderPanelPrincipal">
                 <!-- panel de busqueda de pasaje -->
                 <div class="cajaInvisible">
-                    <div class="panelViaje">
-                        <div class="caja caja1">
-                            <h2>Reserve</h2>
-                        </div>
+                    <form action="">
+                        <div class="panelViaje">
 
-                        <div class="caja caja2">
-                            <input type="radio" name="cantidad" id="soloIda">
-                            <label for="soloIda" id="izq"> Solo ida</label>
+                            <div class="caja caja1">
+                                <h2>Reserve</h2>
+                            </div>
 
-                            <input type="radio" name="cantidad" id="idaVuelta">
-                            <label for="idaVuelta" id="der"> Ida y vuelta</label>
-                        </div>
+                            <div class="caja caja2">
+                                <input type="radio" name="cantidad" id="soloIda">
+                                <label for="soloIda" id="izq"> Solo ida</label>
 
-                        <div class="caja cajaOri">
-                            <form action="">
-                                <label for="">Origen</label>
-                                <input required type="text" name="origen" id="">
-                            </form>
-                        </div>
+                                <input type="radio" name="cantidad" id="idaVuelta">
+                                <label for="idaVuelta" id="der"> Ida y vuelta</label>
+                            </div>
 
-                        <i class="fa-solid fa-right-left elemento"></i>
+                            <!-- lugar de origen -->
+                            <div class="caja cajaOri">
 
-                        <div class="caja cajaDes">
-                            <form action="">
-                                <label for="">Destino</label>
-                                <input required type="text" name="destino" id="">
-                            </form>
+                                <label for="lugarOrigen">Origen</label>
+                                <input required type="text" name="origen" id="lugarOrigen">
+
+                            </div>
+
+                            <i class="fa-solid fa-right-left elemento"></i>
+
+                            <!-- lugar de destino -->
+                            <div class="caja cajaDes">
+
+                                <label for="lugarDestino">Destino</label>
+                                <input required type="text" name="destino" id="lugarDestino">
+
+                            </div>
+
+                            <!-- fecha de ida -->
+                            <div class="caja cajaIda">
+
+                                <label for="fechaIda">Ida</label>
+                                <input required type="date" name="fechaIda" max="2024-01-01" id="fechaIda">
+
+                            </div>
+
+                            <!-- fecha de vuelta -->
+                            <div class="caja cajaVuelta">
+
+                                <label for="fechaVuelta">Vuelta</label>
+                                <input required type="date" name="fechadeVuelta" id="fechaVuelta">
+
+                            </div>
+
+                            <!-- cantidad de boletos -->
+                            <div class="caja cajaCant">
+
+                                <label for="cantidadPasaje">Cantidad</label>
+                                <input required type="number" min="1" max="10" pattern="^[0-9]+" name="cantidad" id="cantidadPasaje">
+
+                            </div>
+
+                            <!-- boton buscar pasaje -->
+                            <div class="caja caja3">
+                                <button id="botonPasaje">Buscar Pasaje</button>
+                            </div>
+
                         </div>
-                        <div class="caja cajaIda">
-                            <form action="">
-                                <label for="">Ida</label>
-                                <input required type="date" name="fechaIda" min="2" id="">
-                            </form>
-                        </div>
-                        <div class="caja cajaVuelta">
-                            <form action="">
-                                <label for="">Vuelta</label>
-                                <input required type="date" name="fechaVuelta"  id="">
-                            </form>
-                        </div>
-                        <div class="caja cajaCant">
-                            <form action="">
-                                <label for="">Cantidad</label>
-                                <input required type="number" min="1" max="10" pattern="^[0-9]+" name="cantidad" id="">
-                            </form>
-                        </div>
-                        <div class="caja caja3">
-                            <input type="button" value="Buscar Pasaje" id="botonPasaje">
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
 
@@ -324,7 +338,8 @@
         </div>
     </footer>
 
-    <script src="./JS/scripts.js"></script>
-    
+    <script src="./JS/index.js"></script>
+
 </body>
+
 </html>

@@ -466,7 +466,8 @@ header li {
     border-radius: 15px;
     color: white;
     font-weight: bolder;
-    font-size: 1.2em;
+    font-size: 1.5em;
+    padding: 0.2em;
 }
 
 #botonPasaje:hover {
@@ -479,7 +480,8 @@ header li {
     border-radius: 15px;
     color: white;
     font-weight: bolder;
-    font-size: 1.2em;
+    font-size: 1.5em;
+    padding: 0.2em;
 }
 
 
