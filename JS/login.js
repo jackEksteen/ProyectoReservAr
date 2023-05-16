@@ -14,5 +14,5 @@ loginForm.addEventListener('submit', (e)=>{
     }
     alert(`bienvenido ${validUser.name}`)
     localStorage.setItem('login_success', JSON.stringify(validUser))
-    window.location.href = 'index.html'
+    window.location.href = 'panel.html'
 })

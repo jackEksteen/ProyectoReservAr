@@ -81,7 +81,7 @@
                         <div class="caja cajaOri">
                             <form action="">
                                 <label for="">Origen</label>
-                                <input type="text" name="origen" id="">
+                                <input required type="text" name="origen" id="">
                             </form>
                         </div>
 
@@ -90,25 +90,25 @@
                         <div class="caja cajaDes">
                             <form action="">
                                 <label for="">Destino</label>
-                                <input type="text" name="destino" id="">
+                                <input required type="text" name="destino" id="">
                             </form>
                         </div>
                         <div class="caja cajaIda">
                             <form action="">
                                 <label for="">Ida</label>
-                                <input type="date" name="fechaIda" id="">
+                                <input required type="date" name="fechaIda" min="2" id="">
                             </form>
                         </div>
                         <div class="caja cajaVuelta">
                             <form action="">
                                 <label for="">Vuelta</label>
-                                <input type="date" name="fechaVuelta" id="">
+                                <input required type="date" name="fechaVuelta"  id="">
                             </form>
                         </div>
                         <div class="caja cajaCant">
                             <form action="">
                                 <label for="">Cantidad</label>
-                                <input type="number" min="1" max="10" pattern="^[0-9]+" name="cantidad" id="">
+                                <input required type="number" min="1" max="10" pattern="^[0-9]+" name="cantidad" id="">
                             </form>
                         </div>
                         <div class="caja caja3">
@@ -325,6 +325,6 @@
     </footer>
 
     <script src="./JS/scripts.js"></script>
+    
 </body>
-
 </html>

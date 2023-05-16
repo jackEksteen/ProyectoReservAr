@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Información</title>
-    <link rel="stylesheet" href="/CSS/estilosInfo.css">
+    <title>Panel Usuario</title>
+    <link rel="stylesheet" href="/CSS/estilos.css">
 
     <!-- google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,13 +17,16 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./CSS/imagenes/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./CSS/imagenes/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/eaf650e03e.js" crossorigin="anonymous"></script>
 </head>
-
-<body>
-
+<body> 
+<!--*******************HEADER*******************************  -->
     <header>
         <div class=" contenedorHeader">
-            <a href="./index.html"><h1>Reserv<span>Ar</span> </h1></a>   
+            <h1>Reserv<span>Ar</span> </h1>
+
             <input type="checkbox" id="menuCheck">
             <label id="menu" for="menuCheck">
                 <span id="menuAbrir"> &#9776; </span>
@@ -56,34 +58,17 @@
     </header>
 
 
-    <nav class="navInfo"></nav>
-
-    <main class="container">
-        <div class="caja"><h1>INFORMACION</h1></div>
-        <div class="caja">
-            <h2>Requisitos para viajar</h2>
-            <br>
-            <h3>Requisitos generales</h3>
-            <p>Antes de viajar y/o comprar tu boleto te recomendamos que verifiques con la embajada o consulado correspondiente la documentación necesaria para realizar todo tu itinerario (documentos de viaje, aduana, salud, entre otros). También podés consultar el sitio de la Asociación Internacional de Transporte Aéreo (IATA) desde  <a href="https://www.iatatravelcentre.com/world.php">Aquí</a> .</p>
-            <p>Deberás presentar la documentación requerida al momento de hacer el check-in, antes de abordar y al llegar a destino. Aquellas personas que no cumplan con las regulaciones establecidas para su viaje, no podrán ser admitidas en nuestros vuelos. </p>
-            <br>
-            <h3> Requisitos Sanitarios-Covid 19</h3>
-            <p>Desde el viernes 26/08/22 las autoridades nacionales no exigen ninguna documentación especial relativa al Covid19 para ingresar/egresar desde/hacia Argentina.</p>
-        </div>
-        <div class="caja"></div>
 
 
 
 
 
 
-    </main>
-
-
+    <!--************************* FOOTER**************************** -->
     <footer class="pie-pagina">
         <div class="grupo-1">
             <div class="box">
-                <a href="#">
+                <a href="./index.html">
                     <h1>Reserv<span>Ar</span> </h1>
                 </a>
             </div>
@@ -95,7 +80,7 @@
             <div class="box">
                 <h2>SIGUENOS</h2>
                 <div class="red-social">
-                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="" class="fa fa-facebook"></a>
                     <a href="#" class="fa fa-instagram"></a>
                     <a href="#" class="fa fa-twitter"></a>
                     <a href="#" class="fa fa-youtube"></a>
@@ -107,7 +92,8 @@
         </div>
     </footer>
 
-    <script src="./JS/scripts.js"></script>
-</body>
+    <script src="./JS/panel.js"></script>
 
+
+</body> 
 </html>
