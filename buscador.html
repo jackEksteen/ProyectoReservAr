@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto ReservAr</title>
-    <link rel="stylesheet" href="/CSS/estilos.css">
+    <link rel="stylesheet" href="/CSS/estilosBuscador.css">
 
     <!-- google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,13 +58,98 @@
         </div>
     </header>
 
-
-    <H1>BUSQUEMOS</H1>
-
+    <nav class="navBuscador"></nav>
 
 
+    <main>
+        <div class="container">
+
+            <div class="caja side">
+                <form action="" id="formulario">
+                    <div class="panelViaje">
+                        <div class="caja caja1">
+                            <h2>Reserve</h2>
+                        </div>
+
+                        <div class="caja caja2">
+                            <input type="radio" name="cantidad" id="soloIda">
+                            <label for="soloIda" id="izq"> Solo ida</label>
+
+                            <input type="radio" name="cantidad" id="idaVuelta">
+                            <label for="idaVuelta" id="der"> Ida y vuelta</label>
+                        </div>
+
+                        <!-- lugar de origen -->
+                        <div class="caja cajaOri">
+                            <label for="lugarOrigen">Origen</label>
+                            <input required type="text" name="lugarOrigen" id="lugarOrigen">
+                        </div>
+
+                        <i class="fa-solid fa-right-left elemento"></i>
+
+                        <!-- lugar de destino -->
+                        <div class="caja cajaDes">
+                            <label for="lugarDestino">Destino</label>
+                            <input required type="text" name="lugarDestino" id="lugarDestino">
+                        </div>
+
+                        <!-- fecha de ida -->
+                        <div class="caja cajaIda">
+                            <label for="fechaIda">Ida</label>
+                            <input required type="date" name="fechaIda" max="2024-01-01" id="fechaIda">
+                        </div>
+
+                        <!-- fecha de vuelta -->
+                        <div class="caja cajaVuelta">
+                            <label for="fechaVuelta">Vuelta</label>
+                            <input required type="date" name="fechaVuelta" id="fechaVuelta">
+                        </div>
+
+                        <!-- cantidad de boletos -->
+                        <div class="caja cajaCant">
+                            <label for="cantidadPasaje">Cantidad</label>
+                            <input required type="number" min="1" max="10" pattern="^[0-9]+" name="cantidadPasaje" id="cantidadPasaje">
+                        </div>
+
+                        <!-- boton buscar pasaje -->
+                        <div class="caja caja3">
+                            <button id="botonPasaje">Buscar Pasaje</button>
+                        </div>
+
+                    </div>
+                </form>
+                
+            </div>
+
+            <div class="caja otherside">
+                <h2>Buscando pasaje para:</h2>
+                <div>
+                    <ul class="respuestas">
+                        <li id="fechaIdaRes">fecha de ida:</li>
+                        <li id="fechaVueltaRes">Fecha de regreso:</li>
+                        <li id="lugarOrigenRes">Lugar de Origen:</li>
+                        <li id="lugarDestinoRes">Lugar de Destino:</li>
+                        <li id="cantidadPasajeRes">Cantidad de Pasajes:</li>
+                    </ul>
+    
+                </div>
+                <div class="opcion">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores inventore quaerat facere odio, accusantium earum ut suscipit possimus temporibus iusto laborum vero enim itaque nisi aut expedita doloremque natus odit?</p>
+                    <button>COMPRAR AHORA</button>
+                </div>
+                <br>
+            </div>
+
+        </div>
 
 
+
+
+
+
+
+    </main>
+    
 
 
 

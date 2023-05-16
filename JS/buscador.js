@@ -1,12 +1,13 @@
-const datosViaje = JSON.parse(localStorage.getItem('datosViaje'))
+const datosViajejson = JSON.parse(localStorage.getItem('datosViaje'))
+
+var datosViaje = datosViajejson[0]
 
 console.log(datosViaje)
-console.log(datosViaje.fechaIda)
-console.log(datosViaje.fechaVuelta)
-console.log(datosViaje.lugarDestino)
+//console.log(datosViajejson[0]);
 
-console.log(`bienvenido ${datosViaje.fechaIda}`)
-console.log(`bienvenido ${datosViaje.fechaVuelta}`)
-console.log(`bienvenido ${datosViaje.lugarDestino}`)
-console.log(`bienvenido ${datosViaje.lugarOrigen}`)
+console.log(`fecha de ida: ${datosViaje.fechaIda}`)
+console.log(`fecha de vuelta: ${datosViaje.fechaVuelta}`)
+console.log(`origen: ${datosViaje.lugarOrigen}`)
+console.log(`destino: ${datosViaje.lugarDestino}`)
+
 
