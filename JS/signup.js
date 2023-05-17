@@ -35,25 +35,12 @@ signupForm.addEventListener("submit", (e)=>{
     if(isUserRegistered){
         warnings += `el usuario ya esta registrado <br>`
         parrafo.innerHTML = warnings
-      //  return alert ('el usuario ya esta registrado')
     }
 
     users.push({name: name, email: email, password: password})
+   
     localStorage.setItem('users', JSON.stringify(users))
     alert('registo exitoso')
     window.location.href= 'login.html'
     }
-
-
-
-    // const users = JSON.parse(localStorage.getItem('users')) || []
-    // const isUserRegistered = users.find(user => user.email === email)
-    // if(isUserRegistered){
-    //     return alert ('el usuario ya esta registrado')
-    // }
-
-    // users.push({name: name, email: email, password: password})
-    // localStorage.setItem('users', JSON.stringify(users))
-    // alert('registo exitoso')
-    // window.location.href= 'login.html'
 })
