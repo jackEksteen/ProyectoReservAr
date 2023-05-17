@@ -113,6 +113,11 @@ main{
     width: min-content;
     color: white;
 }
+a{text-decoration: none; padding: 0; margin: 0;}
+header a{
+    padding: 0;
+    margin: 0;
+}
 .opcion button:hover{
     background: #ff7a80;
     border: 1px solid ff7a80;
@@ -335,7 +340,6 @@ header ul {
 header a {
     color: black;
     text-decoration: none;
-    padding: 1em;
 }
 
 header li {
@@ -536,9 +540,7 @@ header li {
         width: 20%;
         justify-content: end;
     }
-    header a {
-        padding-top: 10px;
-    }
+
     header li {
         padding: 0 0.5em;
     }
@@ -691,5 +693,8 @@ header li {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 30px;
         padding: 35px 0px;
+    }
+    .opcion{
+        flex-direction: column;
     }
 }
