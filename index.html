@@ -65,7 +65,9 @@
             <div class="contenderPanelPrincipal">
                 <!-- panel de busqueda de pasaje -->
                 <div class="cajaInvisible">
-                    <form action="">
+               
+               
+                    <form action="" id="formulario">
                         <div class="panelViaje">
 
                             <div class="caja caja1">
@@ -82,44 +84,34 @@
 
                             <!-- lugar de origen -->
                             <div class="caja cajaOri">
-
                                 <label for="lugarOrigen">Origen</label>
-                                <input required type="text" name="origen" id="lugarOrigen">
-
+                                <input required type="text" name="lugarOrigen" id="lugarOrigen">
                             </div>
 
                             <i class="fa-solid fa-right-left elemento"></i>
 
                             <!-- lugar de destino -->
                             <div class="caja cajaDes">
-
                                 <label for="lugarDestino">Destino</label>
-                                <input required type="text" name="destino" id="lugarDestino">
-
+                                <input required type="text" name="lugarDestino" id="lugarDestino">
                             </div>
 
                             <!-- fecha de ida -->
                             <div class="caja cajaIda">
-
                                 <label for="fechaIda">Ida</label>
                                 <input required type="date" name="fechaIda" max="2024-01-01" id="fechaIda">
-
                             </div>
 
                             <!-- fecha de vuelta -->
                             <div class="caja cajaVuelta">
-
                                 <label for="fechaVuelta">Vuelta</label>
-                                <input required type="date" name="fechadeVuelta" id="fechaVuelta">
-
+                                <input required type="date" name="fechaVuelta" id="fechaVuelta">
                             </div>
 
                             <!-- cantidad de boletos -->
                             <div class="caja cajaCant">
-
                                 <label for="cantidadPasaje">Cantidad</label>
-                                <input required type="number" min="1" max="10" pattern="^[0-9]+" name="cantidad" id="cantidadPasaje">
-
+                                <input required type="number" min="1" max="10" pattern="^[0-9]+" name="cantidadPasaje" id="cantidadPasaje">
                             </div>
 
                             <!-- boton buscar pasaje -->
@@ -335,6 +327,14 @@
         </div>
         <div class="grupo-2">
             <small>&copy; 2023 <b>Jack</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+
+    <script src="./JS/index.js"></script>
+
+</body>
+
+</html>     <small>&copy; 2023 <b>Jack</b> - Todos los Derechos Reservados.</small>
         </div>
     </footer>
 

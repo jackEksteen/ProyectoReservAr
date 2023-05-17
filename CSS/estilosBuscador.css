@@ -1,0 +1,700 @@
+body {font-family: 'Kadwa', serif; padding: 0;margin: 0;}
+input[type="date"] {cursor: pointer;}
+a{text-decoration: none;}
+
+/*************************MAIN*****************************/
+main{
+    display: flex;
+    justify-content: center;
+    padding: 5em 1em;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    max-width: 1400px;
+    background: white;
+    padding: 0;
+    box-shadow: 0px 50px 80px white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.respuestas{
+    text-decoration: none;
+    grid-gap: 1% 19%;
+    display: grid;   
+    grid-template-columns: auto auto;
+    justify-content: start;
+    list-style: none;
+}
+.respuestas li{
+    min-width: min-content;
+    padding: auto;
+    color: #1693BB;
+    font-size: 1em;
+}
+
+.caja{
+    margin: 2% 0px;
+}
+.side{
+    width: 40%;
+    padding: 0;
+    margin: 0;
+    background: #ccc;
+}
+.otherside{
+    background: #eee;
+}
+
+
+/*********************panel****************************/
+.panelViaje {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.elemento {
+    color: #808080;
+    display: flex;
+    align-items: end;
+    padding-bottom: 8px;
+    margin: 0;
+}
+
+.caja {
+    padding: 0px;
+    text-align: center;
+    font-weight: bold;
+    min-width: 250px;
+    height: 100%;
+}
+
+.caja input {
+    background: #FFFFFF;
+    box-shadow: -1px -1px 10px 6PX rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    border: #FFFFFF;
+    padding: .5em;
+}
+.navBuscador{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-image: url(./imagenes/jeshoots-com-mSESwdMZr-A-unsplash.jpg);
+    background-position-y: 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+
+.caja h2 {
+    font-size: 2em;
+    margin: 0;
+    padding: 2%;
+}
+.opcion p{
+    /* padding: 2%; */
+    margin: 0;
+}
+.opcion button{
+    cursor: pointer;
+    border: 1px solid #fa503f;
+    padding: 1em;
+    background: #fa503f;
+    font-size: 1em;
+    border-radius: 15px;
+    height: min-content;
+    font-weight: bolder;
+    width: min-content;
+    color: white;
+}
+a{text-decoration: none; padding: 0; margin: 0;}
+header a{
+    padding: 0;
+    margin: 0;
+}
+.opcion button:hover{
+    background: #ff7a80;
+    border: 1px solid ff7a80;
+}    
+.opcion{
+    background: rgb(250, 250, 250);
+    border-radius: 15px;
+    margin: 5% 1%;
+    display: flex;
+    padding: 2%;
+    font-weight: bold;
+    align-items: center;
+}
+.caja1 {
+    grid-column: 1 / 4;
+    align-items: left;
+    padding-left: 0px;
+}
+
+.caja2 {
+    grid-column: 4 / 7;
+    padding-top: 10%;
+}
+
+.caja3 {
+    grid-column: 1/7;
+    padding: 3%;
+}
+
+#botonPasaje {
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    background: #2EB6E1;
+    border: 1px solid #1693BB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.5em;
+    padding: 0.2em;
+}
+
+#botonPasaje:hover {
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    background: #2e8ae1;
+    border: 1px solid #1693BB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.5em;
+    padding: 0.2em;
+}
+
+
+.panelViaje input[type="radio"] {
+    display: none;
+}
+
+.caja2 label {
+    color: #1693BB;
+    margin: -3px;
+    background: rgb(255, 255, 255);
+    padding: 2px 15px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-size: 1em;
+    border: 2px solid #2EB6E1;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.caja2 label:hover {
+    color: #1693BB;
+    margin: -3px;
+    background: #ecf8fb;
+    padding: 2px 15px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-size: 1em;
+    border: 2px solid #2EB6E1;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#izq {
+    border-radius: 20px 0px 0px 20px;
+}
+
+#der {
+    border-radius: 0px 20px 20px 0px;
+}
+
+.caja input[type="radio"]:checked+label {
+    padding: 3px 15px;
+    background-color: #2EB6E1;
+    color: white;
+    font-size: 1.1em;
+}
+/**fin cajas**/
+@media only screen and (max-width: 520px) {
+    .container{
+        flex-direction: column;
+    }
+    .caja{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************Header - Menu Hamburguesa*********************/
+header {
+    display: flex;
+    place-content: space-between;
+    justify-content: center;
+    background-color: #FFFFFF;
+    box-shadow: 0px 50px 80px white;
+    position: relative;}
+
+header p {
+    padding: 0 0.5em;
+    margin: 0;
+}
+
+header div.contenedorHeader {
+    text-align: center;
+    display: flex;
+    margin: 0px;
+    font-weight: bolder;
+    max-width: 1500px;
+    /*padding: 0px 100px; */
+    border: 0px;
+    place-content: flex-start;
+
+}
+
+header div.contenedorHeader nav {
+    width: 70%;
+    display: flex;
+    place-content: space-between;
+    background: rgb(255, 255, 255);
+    padding: 0 100px 0 100px;
+    height: 100%;
+}
+
+#menu,
+#menuCheck {
+    display: none;
+}
+
+.contenedorHeader h1 {
+    height: 100%;
+    position: relative;
+    margin: 0;
+    margin: 0%;
+    padding: 0px;
+    font-size: 2.5em;
+    align-items: center;
+    display: flex;
+}
+
+header div.contenedorHeader nav .menusCambian li:hover {
+    background-color: #efefef;
+    border-bottom: 10px solid #2EB6E1;
+    transition: all 300ms ease;
+}
+
+header div.contenedorHeader nav .menusSuperponen {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+header h1>span {
+    color: #2EB6E1;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    place-content: space-between;
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+}
+
+header li {
+    padding: 1em;
+}
+
+#iconUser {
+    display: none;
+}
+
+#iconHelp {
+    display: none;
+}
+
+/*********mediaqueries header************/
+
+@media only screen and (max-width: 970px) {
+    header {
+        place-content: flex-start;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+    header h1 a {
+        padding: 0;
+    }
+
+    header div.contenedorHeader {
+        width: 100%;
+        display: flex;
+        place-content: space-between;
+        padding: 0% 10%;
+        align-items: center;
+    }
+
+    header div.contenedorHeader nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 60%;
+        background: rgb(0, 0, 0);
+        padding-top: 10em;
+        padding-right: 1.5em;
+        opacity: 0.8;
+        color: white;
+        z-index: 999;
+        padding-left: 0;
+        display: flex;
+        place-content: space-between;
+    }
+
+    header div.contenedorHeader nav .menusCambian {
+        opacity: 0.8;
+        color: black;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #menuCheck:not(:checked)~nav {
+        display: none;
+    }
+
+    #menuCheck:checked~nav {
+        display: block;
+    }
+
+    #menu {
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        display: block;
+        color: white;
+        background: #2EB6E1;
+        font-size: 2em;
+        font-weight: bold;
+        border: 1px solid 2EB6E1;
+        border-radius: 0.2em;
+        padding: 0;
+        z-index: 9999;
+    }
+
+    #menu:hover {
+        color: white;
+        background-color: #51c0e2;
+        cursor: pointer;
+    }
+
+    #menuCerrar {
+        display: none;
+    }
+
+    #menuCheck:checked~label #menuAbrir {
+        display: none;
+    }
+
+    #menuCheck:checked~.caja {
+        display: none;
+    }
+
+    #menuCheck:checked~label #menuCerrar {
+        display: block;
+    }
+
+    header div.contenedorHeader nav ul a {
+        color: white;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    header div.contenedorHeader nav ul a:hover {
+        color: rgb(5, 5, 5);
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .menusCambian li {
+        width: 92%;
+    }
+
+    header div.contenedorHeader nav ul,
+    header div.contenedorHeader nav .menusCambian ul li {
+        display: block;
+        text-align: right;
+        font-size: 1.2em;
+        width: 100%;
+    }
+
+    header div.contenedorHeader nav ul,
+    header div.contenedorHeader nav .menusSuperponen ul li {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        text-align: right;
+        font-size: 1.2em;
+    }
+
+    header div.contenedorHeader nav .menusSuperponen {
+        display: flex;
+        /* align-items: end; */
+        margin-top: 100px;
+    }
+
+    header div.contenedorHeader .menusCambian li:hover {
+        background: rgba(180, 180, 180, 0.514);
+        border: 0;
+    }
+}
+
+
+/**para que no se rompan los botones al achicar**/
+
+@media only screen and (max-width: 1300px) and (min-width: 971px) {
+    header div.contenedorHeader nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 100%;
+        padding-right: 0;
+        height: 100%;
+        margin-right: 3%;
+        padding-left: 4%;
+    }
+    header div.contenedorHeader {
+        display: flex;
+        margin: 0px;
+        font-weight: bolder;
+        width: 100%;
+        margin-left: 20px;
+        border: 0px;
+        padding-right: 0;
+        place-content: flex-start;
+        align-items: center;
+    }
+    header div.contenedorHeader nav .menusCambian {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+    header div.contenedorHeader nav .menusCambian li {
+        height: 75%;
+        width: 100%;
+        padding-top: 4%;
+    }
+
+    header div.contenedorHeader nav .menusSuperponen {
+        display: flex;
+        padding: 0;
+        width: 20%;
+        justify-content: end;
+    }
+
+    header li {
+        padding: 0 0.5em;
+    }
+    #iconUser {
+        display: block;
+        padding: 0.6em;
+    }
+    #iconHelp {
+        display: block;
+        padding: 0.6em;
+    }
+    #botonAyuda {
+        border: 12px solid gray;
+        color: gray;
+        font-weight: bolder;
+        border-radius: 3em;
+        font-size: 1em;
+        padding: 10em;
+        display: inline-block;
+    }
+    header p {
+        padding: 0;
+        margin: 0;
+        display: none;
+    }
+}
+
+/********botones header*******/
+#botonAyuda {
+    border: 2px solid gray;
+    color: gray;
+    font-weight: bolder;
+    border-radius: 3em;
+    font-size: 1em;
+    padding: 0em 0em;
+    display: inline-block;
+}
+#botonAyuda:hover {
+    border: 2px solid gray;
+    background: grey;
+    color: white;
+    font-weight: bolder;
+    border-radius: 3em;
+    font-size: 1em;
+    padding: 0em 0em;
+    display: inline-block;
+}
+#botonInic {
+    border: 2px solid rgba(46, 182, 225, 1);
+    color: rgba(46, 182, 225, 1);
+    font-weight: bolder;
+    border-radius: 2em;
+    font-size: 1em;
+    padding: 0em 0em;
+    display: inline-block;
+}
+#botonInic:hover {
+    border: 2px solid rgba(46, 182, 225, 1);
+    color: white;
+    background: rgba(46, 182, 225, 1);
+    font-weight: bolder;
+    border-radius: 3em;
+    font-size: 1em;
+    padding: 0em 0em;
+    display: inline-block;
+}
+#iconHelp {
+    color: #808080;
+}
+#iconHelp:hover {
+    color: #fff;
+}
+
+/**********************FOOOTER***********************/
+
+.pie-pagina {
+    width: 100%;
+    background-color: #2EB6E1;
+    height: min-content;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 20px 0px;
+}
+
+.pie-pagina .grupo-1 .box h1 {
+    color: #000000;
+    margin-bottom: 25px;
+    font-size: 50px;
+}
+
+.pie-pagina .grupo-1 .box h1 span {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 50px;
+}
+
+
+
+
+.pie-pagina .grupo-1 .box h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    text-align: center;
+    transition: all 300ms ease;
+    background-color: #50C6EB;
+    border-radius: 5px;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+    color: aqua;
+}
+
+.pie-pagina .grupo-2 {
+    background-color: #50C6EB;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+
+@media screen and (max-width:800px) {
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+    .opcion{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto ReservAr</title>
+    <link rel="stylesheet" href="/CSS/estilosBuscador.css">
+
+    <!-- google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./CSS/imagenes/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./CSS/imagenes/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./CSS/imagenes/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/eaf650e03e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <div class=" contenedorHeader">
+            <a href="./index.html"><h1>Reserv<span>Ar</span> </h1></a>   
+            
+            <input type="checkbox" id="menuCheck">
+            <label id="menu" for="menuCheck">
+                <span id="menuAbrir"> &#9776; </span>
+                <span id="menuCerrar">X</span>
+            </label>
+
+            <nav>
+                <ul class="menusCambian">
+                    <li><a href="./promociones.html">Promociones</a></li>
+                    <li><a href="./login.html">Mis reservas</a></li>
+                    <li><a href="./informacion.html">Información</a></li>
+                </ul>
+                <ul class="menusSuperponen">
+                    <li>
+                        <a href="/ayuda.html" id="botonAyuda">
+                            <p>Centro de ayuda</p>
+                            <i class="fa-solid fa-question fa-2xl" id="iconHelp"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/login.html" id="botonInic">
+                            <p>Inicia Sesion</p>
+                            <i class="fa-solid fa-user fa-2xl" id="iconUser"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="navBuscador"></nav>
+
+
+    <main>
+        <div class="container">
+
+            <div class="caja side">
+                <form action="" id="formulario">
+                    <div class="panelViaje">
+                        <div class="caja caja1">
+                            <h2>Reserve</h2>
+                        </div>
+
+                        <div class="caja caja2">
+                            <input type="radio" name="cantidad" id="soloIda">
+                            <label for="soloIda" id="izq"> Solo ida</label>
+
+                            <input type="radio" name="cantidad" id="idaVuelta">
+                            <label for="idaVuelta" id="der"> Ida y vuelta</label>
+                        </div>
+
+                        <!-- lugar de origen -->
+                        <div class="caja cajaOri">
+                            <label for="lugarOrigen">Origen</label>
+                            <input required type="text" name="lugarOrigen" id="lugarOrigen">
+                        </div>
+
+                        <i class="fa-solid fa-right-left elemento"></i>
+
+                        <!-- lugar de destino -->
+                        <div class="caja cajaDes">
+                            <label for="lugarDestino">Destino</label>
+                            <input required type="text" name="lugarDestino" id="lugarDestino">
+                        </div>
+
+                        <!-- fecha de ida -->
+                        <div class="caja cajaIda">
+                            <label for="fechaIda">Ida</label>
+                            <input required type="date" name="fechaIda" max="2024-01-01" id="fechaIda">
+                        </div>
+
+                        <!-- fecha de vuelta -->
+                        <div class="caja cajaVuelta">
+                            <label for="fechaVuelta">Vuelta</label>
+                            <input required type="date" name="fechaVuelta" id="fechaVuelta">
+                        </div>
+
+                        <!-- cantidad de boletos -->
+                        <div class="caja cajaCant">
+                            <label for="cantidadPasaje">Cantidad</label>
+                            <input required type="number" min="1" max="10" pattern="^[0-9]+" name="cantidadPasaje" id="cantidadPasaje">
+                        </div>
+
+                        <!-- boton buscar pasaje -->
+                        <div class="caja caja3">
+                            <button id="botonPasaje">Buscar Pasaje</button>
+                        </div>
+
+                    </div>
+                </form>
+                
+            </div>
+
+            <div class="caja otherside">
+
+                <h2>Buscando pasaje para:</h2>
+                <div>
+                    <ul class="respuestas">
+                        <li id="fechaIdaRes">fecha de ida:  </li>
+                        <li id="fechaVueltaRes">Fecha de regreso:  </li>
+                        <li id="lugarOrigenRes">Lugar de Origen:  </li>
+                        <li id="lugarDestinoRes">Lugar de Destino:  </li>
+                        <li id="cantidadPasajeRes">Cantidad de Pasajes:  </li>
+                    </ul>
+                </div>
+                <div class="opcion">
+                    <img src="css/imagenes/logo_latam.jpg" style="height: 70px;width: 100px;padding: 0;margin: 0;">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores inventore quaerat facere odio, accusantium earum ut suscipit possimus temporibus iusto laborum vero enim itaque nisi aut expedita doloremque natus odit?</p>
+                   <a href="login.html"><button>COMPRAR AHORA</button></a> 
+                </div>
+                <br>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+    </main>
+    
+
+
+
+    <!--************************* FOOTER**************************** -->
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <a href="./index.html">
+                    <h1>Reserv<span>Ar</span> </h1>
+                </a>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+            </div>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>Jack</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+
+    <script src="./JS/buscador.js"></script>
+    <script src="./JS/index.js"></script>
+
+</body>
+
+</html>
