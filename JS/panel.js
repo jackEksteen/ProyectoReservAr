@@ -1,6 +1,9 @@
+const sesionArray = JSON.parse(localStorage.getItem('sessionUser')) 
 
-const users = JSON.parse(localStorage.getItem('users')) || []
-console.log(users)
-const usuarioValido = JSON.parse(localStorage.getItem('validUser'))
-localStorage.getItem(validUser)
-console.log(validUser)
+var session = sesionArray
+ console.log(users)
+/*******************ESTABAS TRATANDO DE MOSTRAR LOS DATSO EN EL PANEL*********/
+
+// const usuarioValido = JSON.parse(localStorage.getItem('validUser'))
+// localStorage.getItem(validUser)
+// console.log(validUser)

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel Usuario</title>
-    <link rel="stylesheet" href="/CSS/estilos.css">
+    <link rel="stylesheet" href="/CSS/estilosPanel.css">
 
     <!-- google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +25,7 @@
 <!--*******************HEADER*******************************  -->
     <header>
         <div class=" contenedorHeader">
-            <h1>Reserv<span>Ar</span> </h1>
+            <a href="./index.html"><h1>Reserv<span>Ar</span> </h1></a>   
 
             <input type="checkbox" id="menuCheck">
             <label id="menu" for="menuCheck">
@@ -48,7 +48,7 @@
                     </li>
                     <li>
                         <a href="/login.html" id="botonInic">
-                            <p>Inicia Sesion</p>
+                            <p>Cerrar Sesión</p>
                             <i class="fa-solid fa-user fa-2xl" id="iconUser"></i>
                         </a>
                     </li>
@@ -56,15 +56,37 @@
             </nav>
         </div>
     </header>
+<!-- /*********************MAIN*****************************/ -->
+    <nav class="navPanel">
+        <h2 id="saludoUsuario">Bienvenido </h2>
+    </nav>
+
+    <main>
+        <div class="container">
+
+            <div class="cajas">
+                
+            </div>
+
+            <div class="cajas">
+                <h4>MIS DATOS</h4>
+                <ul>
+                    <li id="datosUsuarioNombre">Nombre: </li>
+                    <li id="datosUsuarioMail">Correo:  </li>
+                    <li>Fecha de nacimiento:  </li>
+
+                </ul>
+            </div>
+
+            <div class="cajas">
+                <h4>MIS COMPRAS</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, mollitia. Ab enim consequatur illo cupiditate perferendis possimus ipsam repellendus non id, repudiandae nulla quidem, beatae quo, corrupti eligendi deleniti aperiam.</p>
+            </div>
+        </div>
+    </main> 
 
 
-
-
-
-
-
-
-    <!--************************* FOOTER**************************** -->
+<!--************************ FOOTER************************* -->
     <footer class="pie-pagina">
         <div class="grupo-1">
             <div class="box">

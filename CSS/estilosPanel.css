@@ -1,0 +1,542 @@
+.container{
+    max-width: 1400px;
+    background: #eee;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cajas{
+    width: 70%;
+}
+.header a{padding: 0;margin: 0;}
+
+.navPanel{
+    background: #00B4DB;
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);
+    background: linear-gradient(to right, #0083B0, #00B4DB);
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navPanel h2{
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+main{
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+ 
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    font-family: 'Kadwa', serif;
+    padding: 0;
+    margin: 0;
+}
+input[type="date"] {
+    cursor: pointer;
+}
+div.contenedor {
+    max-width: 1400 px;
+    margin: 0px auto;
+    font-weight: bolder;
+}
+a{text-decoration: none;}
+
+/******************Header - Menu Hamburguesa*********************/
+header {
+    display: flex;
+    place-content: space-between;
+    justify-content: center;
+    background-color: #FFFFFF;
+    box-shadow: 0px 50px 80px white;
+    position: relative;}
+
+header p {
+    padding: 0 0.5em;
+    margin: 0;
+}
+
+header div.contenedorHeader {
+    text-align: center;
+    display: flex;
+    margin: 0px;
+    font-weight: bolder;
+    max-width: 1500px;
+    border: 0px;
+    place-content: flex-start;
+
+}
+
+header div.contenedorHeader nav {
+    width: 70%;
+    display: flex;
+    place-content: space-between;
+    background: rgb(255, 255, 255);
+    padding: 0 100px 0 100px;
+    height: 100%;
+}
+
+#menu,
+#menuCheck {
+    display: none;
+}
+
+.contenedorHeader h1 {
+    height: 100%;
+    position: relative;
+    margin: 0;
+    margin: 0%;
+    padding: 0px;
+    font-size: 2.5em;
+    align-items: center;
+    display: flex;
+}
+
+header div.contenedorHeader nav .menusCambian li:hover {
+    background-color: #efefef;
+    border-bottom: 10px solid #2EB6E1;
+    transition: all 300ms ease;
+}
+
+header div.contenedorHeader nav .menusSuperponen {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+header h1>span {
+    color: #2EB6E1;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    place-content: space-between;
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+}
+
+header li {
+    padding: 1em;
+}
+
+#iconUser {
+    display: none;
+}
+
+#iconHelp {
+    display: none;
+}
+
+/*********mediaqueries header************/
+
+@media only screen and (max-width: 970px) {
+    header {
+        place-content: flex-start;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+    header h1 a {
+        padding: 0;
+    }
+
+    header div.contenedorHeader {
+        width: 100%;
+        display: flex;
+        place-content: space-between;
+        padding: 0% 10%;
+        align-items: center;
+    }
+
+    header div.contenedorHeader nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 60%;
+        background: rgb(0, 0, 0);
+        padding-top: 10em;
+        padding-right: 1.5em;
+        opacity: 0.8;
+        color: white;
+        z-index: 999;
+        padding-left: 0;
+        display: flex;
+        place-content: space-between;
+    }
+
+    header div.contenedorHeader nav .menusCambian {
+        opacity: 0.8;
+        color: black;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #menuCheck:not(:checked)~nav {
+        display: none;
+    }
+
+    #menuCheck:checked~nav {
+        display: block;
+    }
+
+    #menu {
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        display: block;
+        color: white;
+        background: #2EB6E1;
+        font-size: 2em;
+        font-weight: bold;
+        border: 1px solid 2EB6E1;
+        border-radius: 0.2em;
+        padding: 0;
+        z-index: 9999;
+    }
+
+    #menu:hover {
+        color: white;
+        background-color: #51c0e2;
+        cursor: pointer;
+    }
+
+    #menuCerrar {
+        display: none;
+    }
+
+    #menuCheck:checked~label #menuAbrir {
+        display: none;
+    }
+
+    #menuCheck:checked~.caja {
+        display: none;
+    }
+
+    #menuCheck:checked~label #menuCerrar {
+        display: block;
+    }
+
+    header div.contenedorHeader nav ul a {
+        color: white;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    header div.contenedorHeader nav ul a:hover {
+        color: rgb(5, 5, 5);
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .menusCambian li {
+        width: 92%;
+    }
+
+    header div.contenedorHeader nav ul,
+    header div.contenedorHeader nav .menusCambian ul li {
+        display: block;
+        text-align: right;
+        font-size: 1.2em;
+        width: 100%;
+    }
+
+    header div.contenedorHeader nav ul,
+    header div.contenedorHeader nav .menusSuperponen ul li {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        text-align: right;
+        font-size: 1.2em;
+    }
+
+    header div.contenedorHeader nav .menusSuperponen {
+        display: flex;
+        /* align-items: end; */
+        margin-top: 100px;
+    }
+
+    header div.contenedorHeader .menusCambian li:hover {
+        background: rgba(180, 180, 180, 0.514);
+        border: 0;
+    }
+}
+
+
+/**para que no se rompan los botones al achicar**/
+
+@media only screen and (max-width: 1300px) and (min-width: 971px) {
+    header div.contenedorHeader nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 100%;
+        padding-right: 0;
+        height: 100%;
+        margin-right: 3%;
+        padding-left: 4%;
+    }
+    header div.contenedorHeader {
+        display: flex;
+        margin: 0px;
+        font-weight: bolder;
+        width: 100%;
+        margin-left: 20px;
+        border: 0px;
+        padding-right: 0;
+        place-content: flex-start;
+        align-items: center;
+    }
+    header div.contenedorHeader nav .menusCambian {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+    header div.contenedorHeader nav .menusCambian li {
+        height: 75%;
+        width: 100%;
+        padding-top: 4%;
+    }
+
+    header div.contenedorHeader nav .menusSuperponen {
+        display: flex;
+        padding: 0;
+        width: 20%;
+        justify-content: end;
+    }
+    header a {
+        padding-top: 10px;
+    }
+    header li {
+        padding: 0 0.5em;
+    }
+    #iconUser {
+        display: block;
+        padding: 0.6em;
+    }
+    #iconHelp {
+        display: block;
+        padding: 0.6em;
+    }
+    #botonAyuda {
+        border: 12px solid gray;
+        color: gray;
+        font-weight: bolder;
+        border-radius: 3em;
+        font-size: 1em;
+        padding: 10em;
+        display: inline-block;
+    }
+    header p {
+        padding: 0;
+        margin: 0;
+        display: none;
+    }
+}
+
+/********botones header*******/
+#botonAyuda {
+    border: 2px solid gray;
+    color: gray;
+    font-weight: bolder;
+    border-radius: 3em;
+    font-size: 1em;
+    padding: 0em 0em;
+    display: inline-block;
+}
+#botonAyuda:hover {
+    border: 2px solid gray;
+    background: grey;
+    color: white;
+    font-weight: bolder;
+    border-radius: 3em;
+    font-size: 1em;
+    padding: 0em 0em;
+    display: inline-block;
+}
+#botonInic {
+    border: 2px solid rgba(46, 182, 225, 1);
+    color: rgba(46, 182, 225, 1);
+    font-weight: bolder;
+    border-radius: 2em;
+    font-size: 1em;
+    padding: 0em 0em;
+    display: inline-block;
+}
+#botonInic:hover {
+    border: 2px solid rgba(46, 182, 225, 1);
+    color: white;
+    background: rgba(46, 182, 225, 1);
+    font-weight: bolder;
+    border-radius: 3em;
+    font-size: 1em;
+    padding: 0em 0em;
+    display: inline-block;
+}
+#iconHelp {
+    color: #808080;
+}
+#iconHelp:hover {
+    color: #fff;
+}
+
+/**********************FOOOTER***********************/
+
+.pie-pagina {
+    width: 100%;
+    background-color: #2EB6E1;
+    height: min-content;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 20px 0px;
+}
+
+.pie-pagina .grupo-1 .box h1 {
+    color: #000000;
+    margin-bottom: 25px;
+    font-size: 50px;
+}
+
+.pie-pagina .grupo-1 .box h1 span {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 50px;
+}
+
+
+
+
+.pie-pagina .grupo-1 .box h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    text-align: center;
+    transition: all 300ms ease;
+    background-color: #50C6EB;
+    border-radius: 5px;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+    color: aqua;
+}
+
+.pie-pagina .grupo-2 {
+    background-color: #50C6EB;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+
+@media screen and (max-width:800px) {
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
+
+
+
+
