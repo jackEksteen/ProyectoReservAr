@@ -1,16 +1,17 @@
 const datosViajeArray = JSON.parse(localStorage.getItem('datosViaje'))
 
 //var datosViaje = datosViajejson[0]
-var datosViaje = datosViajeArray[datosViajeArray.length-1]
-
+var datosViaje = datosViajeArray[datosViajeArray.length - 1]
+alert("???")
+console.log("ACTUALIZA")
 
 console.log(datosViaje)
 console.log(datosViajeArray);
 
-console.log(`fecha de ida: ${datosViaje.fechaIda}`)
-console.log(`fecha de vuelta: ${datosViaje.fechaVuelta}`)
-console.log(`origen: ${datosViaje.lugarOrigen}`)
-console.log(`destino: ${datosViaje.lugarDestino}`)
+// console.log(`fecha de ida: ${datosViaje.fechaIda}`)
+// console.log(`fecha de vuelta: ${datosViaje.fechaVuelta}`)
+// console.log(`origen: ${datosViaje.lugarOrigen}`)
+// console.log(`destino: ${datosViaje.lugarDestino}`)
 
 let elementoIda = document.querySelector("#fechaIdaRes")
 let contenidoIda = document.createTextNode(datosViaje.fechaIda)
@@ -34,6 +35,6 @@ elementoBoletos.appendChild(contenidoBoletos)
 
 
 
-console.log(contenidoBoletos)
+// console.log(contenidoBoletos)
 
 

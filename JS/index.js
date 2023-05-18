@@ -7,17 +7,17 @@ var cantidad = document.getElementById("cantidadPasaje")
 
 alert("DALE LIVESERVER DEJATE DE JODER")
 
+function idaVuelta(){
+    let inputVuelta = document.querySelector("#fechaVuelta")
+    inputVuelta.removeAttribute('disabled','')
+    console.log("se aprieta boton solo ida, se borra el disabled de soloida")
+}
+
 function soloIda(){
     console.log("???")
     let inputVuelta = document.querySelector("#fechaVuelta")
     inputVuelta.setAttribute('disabled','')
     console.log("se aprieta boton solo ida, se deshabilita el input de vuelta")
-}
-
-function idaVuelta(){
-    let inputVuelta = document.querySelector("#fechaVuelta")
-    inputVuelta.removeAttribute('disabled','')
-    console.log("se aprieta boton solo ida, se borra el disabled de soloida")
 }
 
 formulario.addEventListener("submit",function(event){
