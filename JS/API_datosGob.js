@@ -6,7 +6,7 @@ fetch(url)
 .then(res => res.json())
 .then(data => {
     data.provincias.forEach(usuario => {
-       console.log(usuario.nombre)
+     //  console.log(usuario.nombre)
  
         //datalist
         const dl = document.createElement('option')
@@ -16,4 +16,7 @@ fetch(url)
     });
 })
 .catch(err => console.log(err))
+
+
+
 

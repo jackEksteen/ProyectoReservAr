@@ -7,3 +7,4 @@ var session = sesionArray
 // const usuarioValido = JSON.parse(localStorage.getItem('validUser'))
 // localStorage.getItem(validUser)
 // console.log(validUser)
+

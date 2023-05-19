@@ -36,3 +36,6 @@ elementoBoletos.appendChild(contenidoBoletos)
 
 
 // console.log(contenidoBoletos)
+
+
+
