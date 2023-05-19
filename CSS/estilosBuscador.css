@@ -8,6 +8,10 @@ main{
     justify-content: center;
     padding: 5em 1em;
 }
+#precio{
+    color: green;
+    width: 40%;
+}
 .container{
     display: flex;
     align-items: center;
