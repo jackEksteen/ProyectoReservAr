@@ -2,7 +2,7 @@ const datosViajeArray = JSON.parse(localStorage.getItem('datosViaje'))
 
 //var datosViaje = datosViajejson[0]
 var datosViaje = datosViajeArray[datosViajeArray.length - 1]
-alert("???")
+
 console.log("ACTUALIZA")
 
 console.log(datosViaje)
@@ -36,5 +36,3 @@ elementoBoletos.appendChild(contenidoBoletos)
 
 
 // console.log(contenidoBoletos)
-
-

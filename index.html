@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto ReservAr</title>
-    <link rel="stylesheet" href="/CSS/estilos.css">
+    <link rel="stylesheet" href="./CSS/estilos.css">
 
     <!-- google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +24,6 @@
 </head>
 
 <body>
-
     <header>
         <div class=" contenedorHeader">
             <h1>Reserv<span>Ar</span> </h1>
@@ -76,16 +75,18 @@
 
                             <div class="caja caja2">
                                 <input type="radio" name="cantidad" id="soloIda">
-                                <label for="soloIda" id="izq" onclick="soloIda()"> Solo ida</label>
+                                <label for="soloIda" id="izq" onclick="soloIdaFunc()"> Solo ida</label>
 
                                 <input type="radio" name="cantidad" id="idaVuelta">
-                                <label for="idaVuelta" id="der" onclick="idaVuelta()"> Ida y vuelta</label>
+                                <label for="idaVuelta" id="der" onclick="idaVueltaFunc()"> Ida y vuelta</label>
                             </div>
 
                             <!-- lugar de origen -->
                             <div class="caja cajaOri">
                                 <label for="lugarOrigen">Origen</label>
-                                <input required type="text" name="lugarOrigen" id="lugarOrigen">
+                                <input type="text" list="prov" name="lugarOrigen" id="lugarOrigen" >
+                                <datalist id="prov">
+                                </datalist>
                             </div>
 
                             <i class="fa-solid fa-right-left elemento"></i>
@@ -93,7 +94,9 @@
                             <!-- lugar de destino -->
                             <div class="caja cajaDes">
                                 <label for="lugarDestino">Destino</label>
-                                <input required type="text" name="lugarDestino" id="lugarDestino">
+                                <input type="text" list="prov" name="lugarDestino" id="lugarDestino" required>
+                                <datalist id="prov">
+                                </datalist>
                             </div>
 
                             <!-- fecha de ida -->
@@ -105,7 +108,7 @@
                             <!-- fecha de vuelta -->
                             <div class="caja cajaVuelta">
                                 <label for="fechaVuelta">Vuelta</label>
-                                <input required type="date" name="fechaVuelta" id="fechaVuelta">
+                                <input required type="date" name="fechaVuelta" id="fechaVuelta" onchange="seleccionarBoton()">
                             </div>
 
                             <!-- cantidad de boletos -->
@@ -149,9 +152,6 @@
                 </div>
             </div>
 
-
-
-
             <!-- promociones y destinos top -->
             <div class="padreProm">
                 <!-- top destino -->
@@ -164,7 +164,7 @@
                             <ul>
                                 <li>
                                     <div class="imgDestino">
-                                        <img src="/CSS/imagenes/derek-oyen-lYv3hXpFdeY-unsplash.jpg"
+                                        <img src="./CSS/imagenes/derek-oyen-lYv3hXpFdeY-unsplash.jpg"
                                             class="imgCarrusel">
                                     </div>
                                     <div class="textoDestino">
@@ -178,7 +178,7 @@
                                 </li>
                                 <li>
                                     <div class="imgDestino">
-                                        <img src="/CSS/imagenes/emilio-lujan-OKWAtnEfN4M-unsplash.jpg"
+                                        <img src="./CSS/imagenes/emilio-lujan-OKWAtnEfN4M-unsplash.jpg"
                                             class="imgCarrusel">
                                     </div>
                                     <div class="textoDestino">
@@ -192,7 +192,7 @@
                                 </li>
                                 <li>
                                     <div class="imgDestino">
-                                        <img src="/CSS/imagenes/ignacio-estevo-xAMfQn0tWoE-unsplash.jpg"
+                                        <img src="./CSS/imagenes/ignacio-estevo-xAMfQn0tWoE-unsplash.jpg"
                                             class="imgCarrusel">
                                     </div>
                                     <div class="textoDestino">
@@ -201,12 +201,12 @@
                                             voluptas mollitia natus magnam reiciendis error alias sint amet porro
                                             reprehenderit labore, temporibus distinctio, eos aliquid, tempora quibusdam.
                                         </p>
-                                        <a href="/promociones.html" id="botonInfo">Mas Información</a>
+                                        <a href="./promociones.html" id="botonInfo">Mas Información</a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="imgDestino">
-                                        <img src="/CSS/imagenes/hector-ramon-perez-e7D8evFSyww-unsplash.jpg"
+                                        <img src="./CSS/imagenes/hector-ramon-perez-e7D8evFSyww-unsplash.jpg"
                                             class="imgCarrusel">
                                     </div>
                                     <div class="textoDestino">
@@ -235,7 +235,7 @@
                             <ul>
                                 <li>
                                     <div class="imgDestino">
-                                        <img src="/CSS/imagenes/jaume-galofre-wh4az6w83gU-unsplash.jpg"
+                                        <img src="./CSS/imagenes/jaume-galofre-wh4az6w83gU-unsplash.jpg"
                                             class="imgCarrusel">
                                     </div>
                                     <div class="textoDestino">
@@ -249,7 +249,7 @@
                                 </li>
                                 <li>
                                     <div class="imgDestino">
-                                        <img src="/CSS/imagenes/kulli-kittus-IcWOh2prgu4-unsplash.jpg"
+                                        <img src="./CSS/imagenes/kulli-kittus-IcWOh2prgu4-unsplash.jpg"
                                             class="imgCarrusel">
                                     </div>
                                     <div class="textoDestino">
@@ -263,7 +263,7 @@
                                 </li>
                                 <li>
                                     <div class="imgDestino">
-                                        <img src="/CSS/imagenes/leonardo-miranda-R4znJdpkwy0-unsplash.jpg"
+                                        <img src="./CSS/imagenes/leonardo-miranda-R4znJdpkwy0-unsplash.jpg"
                                             class="imgCarrusel">
                                     </div>
                                     <div class="textoDestino">
@@ -277,7 +277,7 @@
                                 </li>
                                 <li>
                                     <div class="imgDestino">
-                                        <img src="/CSS/imagenes/nicolas-taylor-ziXS8iTdeXE-unsplash.jpg"
+                                        <img src="./CSS/imagenes/nicolas-taylor-ziXS8iTdeXE-unsplash.jpg"
                                             class="imgCarrusel">
                                     </div>
                                     <div class="textoDestino">
@@ -294,6 +294,7 @@
                     </div>
                 </div>
             </div>
+            <!-- fin contenedor -->
         </div>
     </main>
 
@@ -331,6 +332,7 @@
     </footer>
     
     <script src="./JS/index.js"></script>
+    <script src="./JS/API_datosGob.js"></script>
 
 </body>
 </html>

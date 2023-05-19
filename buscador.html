@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto ReservAr</title>
-    <link rel="stylesheet" href="/CSS/estilosBuscador.css">
+    <title>Buscar Pasaje</title>
+    <link rel="stylesheet" href="./CSS/estilosBuscador.css">
 
     <!-- google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -82,7 +82,9 @@
                         <!-- lugar de origen -->
                         <div class="caja cajaOri">
                             <label for="lugarOrigen">Origen</label>
-                            <input required type="text" name="lugarOrigen" id="lugarOrigen">
+                            <input type="text" list="prov" name="lugarOrigen" id="lugarOrigen" >
+                            <datalist id="prov">
+                            </datalist>
                         </div>
 
                         <i class="fa-solid fa-right-left elemento"></i>
@@ -90,7 +92,9 @@
                         <!-- lugar de destino -->
                         <div class="caja cajaDes">
                             <label for="lugarDestino">Destino</label>
-                            <input required type="text" name="lugarDestino" id="lugarDestino">
+                            <input type="text" list="prov" name="lugarDestino" id="lugarDestino" required>
+                            <datalist id="prov">
+                            </datalist>
                         </div>
 
                         <!-- fecha de ida -->
@@ -102,7 +106,7 @@
                         <!-- fecha de vuelta -->
                         <div class="caja cajaVuelta">
                             <label for="fechaVuelta">Vuelta</label>
-                            <input required type="date" name="fechaVuelta" id="fechaVuelta">
+                            <input required type="date" name="fechaVuelta" id="fechaVuelta" onchange="seleccionarBoton()">
                         </div>
 
                         <!-- cantidad de boletos -->
@@ -134,7 +138,7 @@
                     </ul>
                 </div>
                 <div class="opcion">
-                    <img src="css/imagenes/logo_latam.jpg" style="height: 70px;width: 100px;padding: 0;margin: 0;">
+                    <img src="./CSS/imagenes/logo_latam.jpg" style="height: 70px;width: 100px;padding: 0;margin: 0;">
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores inventore quaerat facere odio, accusantium earum ut suscipit possimus temporibus iusto laborum vero enim itaque nisi aut expedita doloremque natus odit?</p>
                    <a href="login.html"><button>COMPRAR AHORA</button></a> 
                 </div>
@@ -184,6 +188,8 @@
 
     <script src="./JS/buscador.js"></script>
     <script src="./JS/index.js"></script>
+    <script src="./JS/API_datosGob.js"></script>
+
 
 </body>
 
