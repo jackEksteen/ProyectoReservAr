@@ -6,6 +6,9 @@ var fechaVuelta = document.getElementById("fechaVuelta")
 var cantidad = document.getElementById("cantidadPasaje")
 var botonIdaVuelta = document.querySelector("#der")
 var soloIdaCheck = false
+const parrafoDestino = document.getElementById("warningsDestino")
+const parrafoFecha = document.getElementById("warningsFecha")
+
 
 //funciones de los botones
 function idaVueltaFunc(){
@@ -31,21 +34,31 @@ function seleccionarBoton(){
 formulario.addEventListener("submit",function(event){
     event.preventDefault()
     verificado = true
+    let warningsDestino = ""
+    let warningsFecha = ""
+    parrafoFecha.innerHTML = warningsFecha
+    parrafoDestino.innerHTML = warningsDestino
 
     //Valida que no se viaje al mismo lugar
     if(lugarOrigen.value == lugarDestino.value){
         verificado = false
-        alert("no puede viajar al mismo lugar")
+        warningsDestino += `no puede viajar al mismo lugar`
+        parrafoDestino.innerHTML = warningsDestino
+      //  alert("no puede viajar al mismo lugar")
     }
     //valida que no viaje el mismo día
     if(fechaIda.value == fechaVuelta.value ){
         verificado = false
-        alert("no puede viajar el mismo día")
+        warningsFecha += `no puede viajar el mismo día`
+        parrafoFecha.innerHTML = warningsFecha
+       // alert("no puede viajar el mismo día")
     }
     //valida que no viaje al pasado 
     if(fechaIda.value > fechaVuelta.value && soloIdaCheck == false ){
         verificado = false
-        alert("no puede viajar al pasado")
+        warningsFecha += `no puede viajar al pasado`
+        parrafoFecha.innerHTML = warningsFecha
+      //  alert("no puede viajar al pasado")
     }
     
 

@@ -532,7 +532,14 @@ header li {
     color: white;
     font-size: 1.1em;
 }
-
+.cajaIda{
+    display: flex;
+    flex-direction: column;
+}
+.cajaVuelta{
+    display: flex;
+    flex-direction: column;
+}
 
 
 
@@ -1078,5 +1085,14 @@ height: 800px;
     }
 }
 
+
+.warnings {
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #b06ab3;
+    padding-top: 10px;
+    font: 0.5em;
+}
 
 
