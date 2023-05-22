@@ -8,9 +8,11 @@ main{
     justify-content: center;
     padding: 5em 1em;
 }
-#precio{
+.precioBoletos{
     color: green;
     width: 40%;
+    padding: 1%;
+    font-size: 1.2em;
 }
 .container{
     display: flex;
@@ -36,10 +38,6 @@ main{
     padding: auto;
     color: #1693BB;
     font-size: 1em;
-}
-
-.caja{
-    margin: 2% 0px;
 }
 .side{
     width: 40%;
@@ -70,11 +68,12 @@ main{
 }
 
 .caja {
-    padding: 0px;
+    padding: 1%;
     text-align: center;
     font-weight: bold;
     min-width: 250px;
     height: 100%;
+    margin: 5% 0;
 }
 
 .caja input {
@@ -94,7 +93,10 @@ main{
     background-repeat: no-repeat;
     background-position-x: center;
 }
-
+li span {
+    color: #000000;
+    font-style: italic;
+}
 
 .caja h2 {
     font-size: 2em;
@@ -102,7 +104,6 @@ main{
     padding: 2%;
 }
 .opcion p{
-    /* padding: 2%; */
     margin: 0;
 }
 .opcion button{
@@ -233,8 +234,16 @@ header a{
     .container{
         flex-direction: column;
     }
+    .contenedorDatosViajes{
+        margin-bottom: 20%;
+    }
+    .respuestas{
+        grid-gap: 9%;
+        padding: 2%;
+    }
     .caja{
         width: 100%;
+        margin: 3% 0;
     }
 }
 
@@ -700,5 +709,9 @@ header li {
     }
     .opcion{
         flex-direction: column;
+    }
+    .respuestas li{
+        flex-direction: column;
+        display: flex;
     }
 }

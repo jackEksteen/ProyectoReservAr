@@ -27,7 +27,7 @@ function soloIdaFunc(){
 }
 function seleccionarBoton(){
     botonIdaVuelta.click()
-    //se selecciona una fecha y se activa automaticamente el boton ida vuelta
+    //se selecciona una fecha de vuelta y se activa automaticamente el boton ida vuelta
 }
 
 //ingreso de datos al formulario
@@ -44,21 +44,18 @@ formulario.addEventListener("submit",function(event){
         verificado = false
         warningsDestino += `no puede viajar al mismo lugar`
         parrafoDestino.innerHTML = warningsDestino
-      //  alert("no puede viajar al mismo lugar")
     }
     //valida que no viaje el mismo día
     if(fechaIda.value == fechaVuelta.value ){
         verificado = false
         warningsFecha += `no puede viajar el mismo día`
         parrafoFecha.innerHTML = warningsFecha
-       // alert("no puede viajar el mismo día")
     }
     //valida que no viaje al pasado 
     if(fechaIda.value > fechaVuelta.value && soloIdaCheck == false ){
         verificado = false
         warningsFecha += `no puede viajar al pasado`
         parrafoFecha.innerHTML = warningsFecha
-      //  alert("no puede viajar al pasado")
     }
     
 
@@ -71,7 +68,8 @@ formulario.addEventListener("submit",function(event){
             fechaIda:fechaIda.value,
             lugarOrigen:lugarOrigen.value,
             lugarDestino:lugarDestino.value,
-            pasajes:cantidadPasaje.value
+            pasajes:cantidadPasaje.value,
+            soloIda:soloIdaCheck
         })
         console.log(datosViaje)
         console.log("valido OK")
