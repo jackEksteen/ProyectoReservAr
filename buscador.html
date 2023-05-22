@@ -73,10 +73,10 @@
 
                         <div class="caja caja2">
                             <input type="radio" name="cantidad" id="soloIda">
-                            <label for="soloIda" id="izq"> Solo ida</label>
+                            <label for="soloIda" id="izq" onclick="soloIdaFunc()"> Solo ida</label>
 
                             <input type="radio" name="cantidad" id="idaVuelta">
-                            <label for="idaVuelta" id="der"> Ida y vuelta</label>
+                            <label for="idaVuelta" id="der" onclick="idaVueltaFunc()"> Ida y vuelta</label>
                         </div>
 
                         <!-- lugar de origen -->
@@ -126,28 +126,22 @@
             </div>
 
             <div class="caja otherside">
-                <!-- panel de resultado de busquedas -->
+
                 <h2>Buscando pasaje para:</h2>
-                <div class="contenedorDatosViajes">
+                <div>
                     <ul class="respuestas">
-                        <li>fecha de ida: <SPAN id="fechaIdaRes"></SPAN>  </li>
-                        <li>Fecha de regreso: <span id="fechaVueltaRes"></span> </li>
-                        <li>Lugar de Origen: <span id="lugarOrigenRes"></span> </li>
-                        <li>Lugar de Destino: <span id="lugarDestinoRes"></span></li>
-                        <li>Cantidad de Pasajes: <span id="cantidadPasajeRes"></span></li>
+                        <li id="fechaIdaRes">fecha de ida:  </li>
+                        <li id="fechaVueltaRes">Fecha de regreso:  </li>
+                        <li id="lugarOrigenRes">Lugar de Origen:  </li>
+                        <li id="lugarDestinoRes">Lugar de Destino:  </li>
+                        <li id="cantidadPasajeRes">Cantidad de Pasajes:  </li>
                     </ul>
                 </div>
                 <div class="opcion">
                     <img src="./CSS/imagenes/logo_latam.jpg" style="height: 70px;width: 100px;padding: 0;margin: 1%;">
-                    <p class="descripcionViaje">Contamos con modernos aviones Boeing y Airbus para entregarte la mejor experiencia a bordo. Con un diseño y tecnología de última generación, nuestras aeronaves hacen que tu viaje sea más seguro, cómodo y eficiente.</p>
-                    <p class="precioBoletos" id="precioBoletosLT">$ </p>
+                    <p>Contamos con modernos aviones Boeing y Airbus para entregarte la mejor experiencia a bordo. Con un diseño y tecnología de última generación, nuestras aeronaves hacen que tu viaje sea más seguro, cómodo y eficiente.</p>
+                    <p id="precio">$ </p>
                     <a href="login.html"><button>COMPRAR AHORA</button></a> 
-                </div>
-                <div class="opcion">
-                    <img src="./CSS/imagenes/Logo-AerolineasArgentinas-ok-600x600.jpg" style="height: 94px;width: 170px;padding: 0;margin: 1%;">
-                    <p class="descripcionViaje">Aerolíneas Argentinas es la compañía líder del mercado aerocomercial argentino desde 1950. Vuela a 37 destinos dentro del país y cuenta con una amplia red de intertramos y corredores federales que conectan distintas provincias sin la necesidad de pasar por Buenos Aires.</p>
-                    <p class="precioBoletos" id="precioBoletosAA">$ </p>
-                    <a href="login.html"><button>COMPRAR AHORA</button></a>
                 </div>
                 <br>
             </div>

@@ -1,6 +1,6 @@
 const parrafo = document.getElementById("warnings")
 const signupForm = document.querySelector("#form")
-
+document.getElementById("nacimiento").innerHtml = "";
 
 signupForm.addEventListener("submit", (e)=>{
     e.preventDefault()
@@ -12,6 +12,7 @@ signupForm.addEventListener("submit", (e)=>{
     const name = document.querySelector('#name').value
     const email = document.querySelector('#email').value
     const password = document.querySelector('#password').value
+    const nacimiento = document.querySelector("#nacimiento").value
 
     if(mailformat.test(email.value)){
         warnings += `El email no es valido <br>`
@@ -37,7 +38,7 @@ signupForm.addEventListener("submit", (e)=>{
         parrafo.innerHTML = warnings
     }
 
-    users.push({name: name, email: email, password: password})
+    users.push({name: name, email: email, nacimiento: nacimiento , password: password})
    
     localStorage.setItem('users', JSON.stringify(users))
     alert('registo exitoso')

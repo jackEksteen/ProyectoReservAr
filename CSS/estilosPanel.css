@@ -31,7 +31,6 @@ main{
     justify-content: center;
     padding: 1%;
  
-
 }
 
 
@@ -410,6 +409,9 @@ header li {
 }
 
 /********botones header*******/
+button{
+    cursor: pointer;
+}
 #botonAyuda {
     border: 2px solid gray;
     color: gray;
@@ -435,8 +437,9 @@ header li {
     font-weight: bolder;
     border-radius: 2em;
     font-size: 1em;
-    padding: 0em 0em;
+    padding: 0.5em;
     display: inline-block;
+    background: white;
 }
 #botonInic:hover {
     border: 2px solid rgba(46, 182, 225, 1);
@@ -445,7 +448,7 @@ header li {
     font-weight: bolder;
     border-radius: 3em;
     font-size: 1em;
-    padding: 0em 0em;
+    padding: 0.5em;
     display: inline-block;
 }
 #iconHelp {

@@ -1,10 +1,34 @@
-const sesionArray = JSON.parse(localStorage.getItem('sessionUser')) 
+// Primero chequea que el usuario este en una sesion activa, sino lo manda a logearse
+if(sessionStorage.getItem('sesionActiva') == "[true]"){
+    console.log("autorizado");
+} else{
+    window.location.href = 'login.html'
+}
 
-var session = sesionArray
- console.log(users)
-/*******************ESTABAS TRATANDO DE MOSTRAR LOS DATSO EN EL PANEL*********/
 
-// const usuarioValido = JSON.parse(localStorage.getItem('validUser'))
-// localStorage.getItem(validUser)
-// console.log(validUser)
+//funcion para cerrar sesion
+function cerrarSesion(){
+    sessionStorage.clear()
+    window.location.href = 'login.html'
+}
+
+//traigo los datos del usuario actualmente logeado
+const sesionArray = JSON.parse(localStorage.getItem('login_success')) 
+
+
+let elementoSaludo = document.querySelector("#saludoUsuario")
+let contenidoSaludo = document.createTextNode(sesionArray.name)
+elementoSaludo.appendChild(contenidoSaludo)
+
+let elementoNombre = document.querySelector("#nombreUsuario")
+let contenidoNombre = document.createTextNode(sesionArray.name)
+elementoNombre.appendChild(contenidoNombre)
+
+let elementoMail = document.querySelector("#datosUsuarioMail")
+let contenidoMail = document.createTextNode(sesionArray.email)
+elementoMail.appendChild(contenidoMail)
+
+let elementoFechaNac = document.querySelector("#fechaNacimiento")
+let contenidoFechaNac = document.createTextNode(sesionArray.nacimiento)
+elementoFechaNac.appendChild(contenidoFechaNac)
 

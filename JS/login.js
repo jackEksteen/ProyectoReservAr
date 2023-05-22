@@ -1,5 +1,6 @@
 const loginForm = document.querySelector('#loginForm')
 const parrafo = document.getElementById("warnings")
+const sessionUser = JSON.parse(localStorage.getItem('validUser'))
 
 loginForm.addEventListener('submit', (e)=>{
     e.preventDefault()
@@ -10,7 +11,7 @@ loginForm.addEventListener('submit', (e)=>{
     const users = JSON.parse(localStorage.getItem('users')) || []
     const validUser = users.find(user => user.email === email && user.password === password)
     const sessionUser = []
-
+    const sessionActive = [] 
 
     if(!validUser){
         warnings += `usuario y/o contraseña incorrecto`
@@ -18,10 +19,13 @@ loginForm.addEventListener('submit', (e)=>{
     }
     alert(`bienvenido ${validUser.name}`)
     localStorage.setItem('login_success', JSON.stringify(validUser))
+    let activo = true
+
+
+    sessionActive.push(activo)
+    console.log(sessionActive)
     
-    sessionUser.push(validUser)
-    console.log(sessionUser)
-    localStorage.setItem('sesion', JSON.stringify(sessionUser))
+    sessionStorage.setItem('sesionActiva', JSON.stringify(sessionActive))
 
     window.location.href = 'panel.html'
 })
