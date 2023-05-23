@@ -45,6 +45,7 @@ main {
     padding: 2%;
     display: flex;
     border-radius: 10px;
+    margin: 5% 0;
 }
 .contenedorCompras{
     width: 100%;
