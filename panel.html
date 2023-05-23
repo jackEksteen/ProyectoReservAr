@@ -62,11 +62,6 @@
     </nav>
     <main>
         <div class="container">
-
-            <div class="cajas">
-                
-            </div>
-
             <div class="cajas">
                 <h4>MIS DATOS</h4>
                 <ul>
@@ -77,8 +72,22 @@
                 </ul>
             </div>
 
-            <div class="cajas">
+            <div class="cajas" id="contenedorcajas">
                 <h4>MIS COMPRAS</h4>
+                <div class="contenedorCompras">
+                    <div class="compras">
+                        <!-- <img src="" style="height: 70px;width: 100px;padding: 0;margin: 1%;min-width: 100px;min-height: 70px;"> -->
+                        <ul class="detallesCompra">
+                            <li>fecha de ida: <SPAN id="fechaIdaCompra"></SPAN></li>
+                            <li>Fecha de regreso: <span id="fechaVueltaCompra"></span></li>
+                            <li>Lugar de Origen: <span id="lugarOrigenCompra"></span></li>
+                            <li>Lugar de Destino: <span id="lugarDestinoCompra"></span></li>
+                            <li>Cantidad de Pasajes: <span id="cantidadPasajeCompra"></span></li>
+                            <li>Empresa: <span id="empresa"></span></li>
+                        </ul>
+                        <p class="precioBoletos" id="totalBoletos">$ </p>
+                    </div>
+                </div>
                 <p id="compras"></p>
             </div>
         </div>

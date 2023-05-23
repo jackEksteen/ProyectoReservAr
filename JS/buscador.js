@@ -56,13 +56,15 @@ elementoValorBoletosAA.appendChild(contenidoValorBoletosAA)
 function comprarAA() {
     var empresa = "Aerolineas_Arg"
     const users = JSON.parse(localStorage.getItem('users')) 
+    const detalles_compra = JSON.parse(localStorage.getItem('comprasRealizadas')) || []
     const sesionArray = JSON.parse(localStorage.getItem('login_success')) 
     const validUser = users.find(user => user.email === sesionArray.email)
-    console.log(totalBoletosAA);
-    var detalles_compra = []
-    detalles_compra.push({lugarOrigen: datosViaje.lugarOrigen, lugar_destino: datosViaje.lugarDestino, fecha_ida: datosViaje.fechaIda, fecha_vuelta: datosViaje.fechaVuelta, cantidad_pasajes: datosViaje.pasajes, precio_pasaje: totalBoletosAA, empresa: empresa})
-    console.log(detalles_compra);
 
+    detalles_compra.push({lugarOrigen: datosViaje.lugarOrigen, lugar_destino: datosViaje.lugarDestino, fecha_ida: datosViaje.fechaIda, fecha_vuelta: datosViaje.fechaVuelta, cantidad_pasajes: datosViaje.pasajes, precio_pasaje: totalBoletosAA, empresa: empresa, comprador: validUser.email})
+
+    localStorage.setItem('comprasRealizadas', JSON.stringify(detalles_compra))
+
+    alert("¡Compraste un pasaje!")
 }
 function comprarLat() {
     var empresa = "Latam"
