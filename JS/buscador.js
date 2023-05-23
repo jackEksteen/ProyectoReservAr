@@ -30,12 +30,14 @@ elementoBoletos.appendChild(contenidoBoletos)
 //Calculo el precio del viaje en base a la cantidad de boletos
 //LATAM
 let elementoValorBoletosLat = document.querySelector("#precioBoletosLT")
-let boletosIntlat = parseInt(datosViaje.pasajes) //parseo la cantidad de boletos
+let boletosIntLat = parseInt(datosViaje.pasajes) //parseo la cantidad de boletos
 if (!datosViaje.soloIda) {
-    boletosIntLat = boletosIntlat * 2;
+    boletosIntLat = boletosIntLat * 2;
     console.log("Es ida y vuelta y se calcula el doble de solo ida");
 }
+console.log(boletosIntLat);
 let totalBoletosLat = valorLatam * boletosIntLat
+console.log(totalBoletosLat)
 let contenidoValorBoletosLat = document.createTextNode(totalBoletosLat)
 elementoValorBoletosLat.appendChild(contenidoValorBoletosLat)
 
@@ -60,7 +62,7 @@ function comprarAA() {
     const sesionArray = JSON.parse(localStorage.getItem('login_success')) 
     const validUser = users.find(user => user.email === sesionArray.email)
 
-    detalles_compra.push({lugarOrigen: datosViaje.lugarOrigen, lugar_destino: datosViaje.lugarDestino, fecha_ida: datosViaje.fechaIda, fecha_vuelta: datosViaje.fechaVuelta, cantidad_pasajes: datosViaje.pasajes, precio_pasaje: totalBoletosAA, empresa: empresa, comprador: validUser.email})
+    detalles_compra.push({lugar_origen: datosViaje.lugarOrigen, lugar_destino: datosViaje.lugarDestino, fecha_ida: datosViaje.fechaIda, fecha_vuelta: datosViaje.fechaVuelta, cantidad_pasajes: datosViaje.pasajes, precio_pasaje: totalBoletosAA, empresa: empresa, comprador: validUser.email})
 
     localStorage.setItem('comprasRealizadas', JSON.stringify(detalles_compra))
 
@@ -73,7 +75,7 @@ function comprarLat() {
     const sesionArray = JSON.parse(localStorage.getItem('login_success')) 
     const validUser = users.find(user => user.email === sesionArray.email)
 
-    detalles_compra.push({lugarOrigen: datosViaje.lugarOrigen, lugar_destino: datosViaje.lugarDestino, fecha_ida: datosViaje.fechaIda, fecha_vuelta: datosViaje.fechaVuelta, cantidad_pasajes: datosViaje.pasajes, precio_pasaje: totalBoletosLat, empresa: empresa, comprador: validUser.email})
+    detalles_compra.push({lugar_origen: datosViaje.lugarOrigen, lugar_destino: datosViaje.lugarDestino, fecha_ida: datosViaje.fechaIda, fecha_vuelta: datosViaje.fechaVuelta, cantidad_pasajes: datosViaje.pasajes, precio_pasaje: totalBoletosLat, empresa: empresa, comprador: validUser.email})
 
     localStorage.setItem('comprasRealizadas', JSON.stringify(detalles_compra))
 

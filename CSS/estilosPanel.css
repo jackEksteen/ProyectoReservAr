@@ -7,6 +7,8 @@
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
+    margin: 5% 0;
+    box-shadow: 0px 0px 10px #747171;
 }
 
 .cajas {
@@ -46,17 +48,38 @@ main {
     display: flex;
     border-radius: 10px;
     margin: 5% 0;
+    justify-content: center;
+    box-shadow: 0px 0px 5px #747171;
+    align-items: center;
 }
 .contenedorCompras{
     width: 100%;
+}
+h4{
+    margin: 10% 0 0;
 }
 .compras ul{
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 5%;
+    width: 70%;
 }
 .compras ul li{
     margin: 2%;
+    list-style: none;
+}
+.precioBoletos{
+    color: red;
+    font-weight: bolder;
+    min-width: 11%;
+    padding: 1%;
+}
+li span{
+    font-style: italic;
+    font-weight:normal;
+}
+.detallesCompra li{
+    font-weight: bold;
 }
 
 
@@ -64,45 +87,12 @@ main {
 
 
 
+@media only screen and (max-width: 680px){
+    .compras{
+        flex-direction: column;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}    
 
 
 
@@ -154,7 +144,6 @@ header div.contenedorHeader {
     max-width: 1500px;
     border: 0px;
     place-content: flex-start;
-
 }
 
 header div.contenedorHeader nav {
