@@ -28,7 +28,6 @@ let contenidoBoletos = document.createTextNode(datosViaje.pasajes)
 elementoBoletos.appendChild(contenidoBoletos)
 
 //Calculo el precio del viaje en base a la cantidad de boletos
-
 //LATAM
 let elementoValorBoletosLat = document.querySelector("#precioBoletosLT")
 let boletosIntlat = parseInt(datosViaje.pasajes) //parseo la cantidad de boletos
@@ -50,6 +49,34 @@ if (!datosViaje.soloIda) {
 let totalBoletosAA = valorAeroArg * boletosIntAA
 let contenidoValorBoletosAA = document.createTextNode(totalBoletosAA)
 elementoValorBoletosAA.appendChild(contenidoValorBoletosAA)
+
+
+
+//funcion de boton comprar
+function comprarAA() {
+    var empresa = "Aerolineas_Arg"
+    const users = JSON.parse(localStorage.getItem('users')) 
+    const sesionArray = JSON.parse(localStorage.getItem('login_success')) 
+    const validUser = users.find(user => user.email === sesionArray.email)
+    console.log(totalBoletosAA);
+    var detalles_compra = []
+    detalles_compra.push({lugarOrigen: datosViaje.lugarOrigen, lugar_destino: datosViaje.lugarDestino, fecha_ida: datosViaje.fechaIda, fecha_vuelta: datosViaje.fechaVuelta, cantidad_pasajes: datosViaje.pasajes, precio_pasaje: totalBoletosAA, empresa: empresa})
+    console.log(detalles_compra);
+
+}
+function comprarLat() {
+    var empresa = "Latam"
+    const users = JSON.parse(localStorage.getItem('users')) 
+    const detalles_compra = JSON.parse(localStorage.getItem('comprasRealizadas')) || []
+    const sesionArray = JSON.parse(localStorage.getItem('login_success')) 
+    const validUser = users.find(user => user.email === sesionArray.email)
+
+    detalles_compra.push({lugarOrigen: datosViaje.lugarOrigen, lugar_destino: datosViaje.lugarDestino, fecha_ida: datosViaje.fechaIda, fecha_vuelta: datosViaje.fechaVuelta, cantidad_pasajes: datosViaje.pasajes, precio_pasaje: totalBoletosLat, empresa: empresa, comprador: validUser.email})
+
+    localStorage.setItem('comprasRealizadas', JSON.stringify(detalles_compra))
+
+    alert("¡Compraste un pasaje!")
+}
 
 
 

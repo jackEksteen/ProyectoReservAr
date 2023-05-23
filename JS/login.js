@@ -10,7 +10,6 @@ loginForm.addEventListener('submit', (e)=>{
     const password = document.querySelector('#password').value
     const users = JSON.parse(localStorage.getItem('users')) || []
     const validUser = users.find(user => user.email === email && user.password === password)
-    const sessionUser = []
     const sessionActive = [] 
 
     if(!validUser){

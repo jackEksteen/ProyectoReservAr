@@ -1,3 +1,4 @@
+//traigo los valores del html 
 var formulario = document.getElementById("formulario")
 var lugarOrigen = document.getElementById("lugarOrigen")
 var lugarDestino = document.getElementById("lugarDestino")
@@ -8,16 +9,15 @@ var botonIdaVuelta = document.querySelector("#der")
 var soloIdaCheck = false
 const parrafoDestino = document.getElementById("warningsDestino")
 const parrafoFecha = document.getElementById("warningsFecha")
+const nombreUsuarioHeader = document.querySelector("#nombreUsuarioHeader")
 
-
-//funciones de los botones
+//funcion de botones 'ida' e 'idavuelta'
 function idaVueltaFunc(){
     let inputVuelta = document.querySelector("#fechaVuelta")
     inputVuelta.removeAttribute('disabled','')
     console.log("se aprieta boton ida y vuelta, se borra el disabled de soloida") 
     soloIdaCheck = false
 }
-
 function soloIdaFunc(){
     let inputVuelta = document.querySelector("#fechaVuelta")
     inputVuelta.setAttribute('disabled','')
@@ -25,12 +25,12 @@ function soloIdaFunc(){
     console.log("se aprieta boton solo ida, se deshabilita el input de vuelta")
     soloIdaCheck = true
 }
-function seleccionarBoton(){
+function seleccionarBoton(){   
+//si el usuario no hace click en los botones y selecciona una fecha de vuelta, se activa automaticamente el boton ida vuelta 
     botonIdaVuelta.click()
-    //se selecciona una fecha de vuelta y se activa automaticamente el boton ida vuelta
 }
 
-//ingreso de datos al formulario
+//validacion de datos en formulario
 formulario.addEventListener("submit",function(event){
     event.preventDefault()
     verificado = true
@@ -57,10 +57,8 @@ formulario.addEventListener("submit",function(event){
         warningsFecha += `no puede viajar al pasado`
         parrafoFecha.innerHTML = warningsFecha
     }
-    
 
-
-    //ingreso de datos correctos. Lo pushea al array, lo guarda en formato json en local storage. y redirige a pagina de busqueda
+    //si ingresa los datos correctos, lo pushea al array, lo guarda en formato json en local storage y redirige a pagina de busqueda.
     if(verificado==true){
         const datosViaje = []
         datosViaje.push({
@@ -76,7 +74,6 @@ formulario.addEventListener("submit",function(event){
         localStorage.setItem('datosViaje', JSON.stringify(datosViaje))
         window.location.href= 'buscador.html'
         }
-
 })
 
 
