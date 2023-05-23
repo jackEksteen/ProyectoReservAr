@@ -1092,5 +1092,23 @@ height: 800px;
     padding-top: 10px;
     font: 0.5em;
 }
-
+.cajaBancos ul {
+    list-style: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contenedorBancos{
+    padding: 1%;
+    margin: 1%;
+    max-width: 1000px;
+    background: #eee;
+}
 
