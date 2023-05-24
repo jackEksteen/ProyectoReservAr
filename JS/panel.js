@@ -1,6 +1,5 @@
 //MEDIDA DE SEGURIDAD
 //Primero chequea que el usuario este en una sesion activa, sino lo manda a logearse
-
 if(sessionStorage.getItem('sesionActiva') == "[true]"){
     console.log("autorizado");
 } else{
@@ -34,6 +33,8 @@ elementoFechaNac.appendChild(contenidoFechaNac)
 
 //traigo y muestro todas las compras hechas por el usuario
 const comprasArray = JSON.parse(localStorage.getItem('comprasRealizadas'))
+
+// para que no se rompa si ingresa por primera vez ya que el localstorage esta vacio
 console.log(comprasArray == null)
 if (comprasArray == null){
     console.log("  entro a if");
@@ -44,6 +45,7 @@ if (comprasArray == null){
     var count = Object.keys(comprasUser).length;   
 }
 
+//elemento del contenedor para cargar las compras
 let contenedorCompras = `
 <div class="contenedorCompras">
 `
@@ -84,3 +86,5 @@ for (let i = 0; i < count; i++) {
     `
 }
 document.querySelector("#contenedorcajas").innerHTML=contenedorCompras
+
+//   :)
