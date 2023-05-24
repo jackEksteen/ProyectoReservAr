@@ -26,7 +26,7 @@ header a{
 
 .caja{
     max-width: 800px;
-    padding: 3%;
+    padding: 1% 0 0 0;
 }
 .navInfo{
     width: 100%;

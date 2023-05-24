@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,11 +22,14 @@
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/eaf650e03e.js" crossorigin="anonymous"></script>
 </head>
-<body> 
-<!--*******************HEADER*******************************  -->
+
+<body>
+    <!--*******************HEADER*******************************  -->
     <header>
         <div class=" contenedorHeader">
-            <h1>Reserv<span>Ar</span> </h1>
+            <a href="./index.html">
+                <h1>Reserv<span>Ar</span> </h1>
+            </a>
 
             <input type="checkbox" id="menuCheck">
             <label id="menu" for="menuCheck">
@@ -56,33 +60,30 @@
             </nav>
         </div>
     </header>
-
     <!-- ****************main********** -->
-
-    <div class="container">
-        <nav></nav>
-
-        <h2>Consulta con tu banco por descuentos increíbles en nuestros servicios</h2>
-        <div class="contenedorBancos">
-            <div class="cajaBancos">
-                <h2>Podes acceder a la financiacion de tu pasaje y viajar mucho más facil.</h2>
-                <p>Hasta 6 cuotas sin interés en los siguientes bancos:</p>
-                <ul>
-                    <li>Tarjeta NaranjaX</li>
-                    <li>Cabal</li>
-                    <li>Banco Credicoop</li>
-                </ul>
-                <br>
-                <br>
-                <p>Hasta 12 cuotas sin interés en los siguientes bancos:</p>
-                <ul>
-                    <li>Tarjeta Patagonia 365</li>
-                    <li>ISBC</li>
-                </ul>
+    <main class="promo">
+        <div class="container">
+            <div class="contenedorBancos">
+                <h2>Consulta con tu banco por descuentos increíbles en nuestros servicios</h2>
+                <div class="cajaBancos">
+                    <h3>Podes acceder a la financiacion de tu pasaje y viajar mucho más facil.</h3>
+                    <h4>Hasta 6 cuotas sin interés en los siguientes bancos:</h4>
+                    <ul>
+                        <li>Tarjeta NaranjaX <img src="./CSS/imagenes/Naranja-X-Nuevo-logo-1024x724-1.jpg" style="width: 100px;"></li>
+                        <li>Cabal <img src="./CSS/imagenes/1200x600wa.jpg" style="width: 100px;"></li>
+                        <li>Banco Credicoop <img src="./CSS/imagenes/Credcoop-Marca.jpg" style="width: 100px;"></li>
+                    </ul>
+                    <br>
+                    <br>
+                    <h4>Hasta 12 cuotas sin interés en los siguientes bancos:</h4>
+                    <ul>
+                        <li>Tarjeta Patagonia 365 <img src="./CSS/imagenes/15.jpg" style="width: 100px;"></li>
+                        <li>ISBC <img src="./CSS/imagenes/Untitled.jpg" style="width: 100px;"></li>
+                    </ul>
+                </div>
             </div>
         </div>
-
-
+    </main>
 
     <!--************************* FOOTER**************************** -->
     <footer class="pie-pagina">
@@ -115,5 +116,6 @@
     <script src="./JS/funciones_globales.js"></script>
 
 
-</body> 
+</body>
+
 </html>
