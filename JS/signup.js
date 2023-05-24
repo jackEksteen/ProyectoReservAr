@@ -13,6 +13,8 @@ signupForm.addEventListener("submit", (e)=>{
     const email = document.querySelector('#email').value
     const password = document.querySelector('#password').value
     const nacimiento = document.querySelector("#nacimiento").value
+    const users = JSON.parse(localStorage.getItem('users')) || []
+    const isUserRegistered = users.find(user => user.email === email)
 
     if(mailformat.test(email.value)){
         warnings += `El email no es valido <br>`
@@ -26,20 +28,16 @@ signupForm.addEventListener("submit", (e)=>{
         warnings += `El nombre no es valido <br>`
         entrar = true
     }
-
-    if(entrar){
-        warnings += `El nombre no es valido <br>`
-    }else{
-        
-    const users = JSON.parse(localStorage.getItem('users')) || []
-    const isUserRegistered = users.find(user => user.email === email)
     if(isUserRegistered){
-        warnings += `el usuario ya esta registrado <br>`
-        parrafo.innerHTML = warnings
+        warnings += `El usuario ya esta registrado <br>`
+        console.log("entra")
+        entrar = true
     }
 
+    parrafo.innerHTML = warnings
+
+    if(!entrar){
     users.push({name: name, email: email, nacimiento: nacimiento , password: password})
-   
     localStorage.setItem('users', JSON.stringify(users))
     alert('registo exitoso')
     window.location.href= 'login.html'
