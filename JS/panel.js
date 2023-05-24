@@ -78,6 +78,5 @@ for (let i = 0; i < count; i++) {
      <p class="precioBoletos" id="totalBoletos">$${comprasUser[i].precio_pasaje}</p>
     </div>
     `
-    console.log(url);
 }
 document.querySelector("#contenedorcajas").innerHTML=contenedorCompras
