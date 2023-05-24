@@ -34,11 +34,15 @@ elementoFechaNac.appendChild(contenidoFechaNac)
 
 //traigo y muestro todas las compras hechas por el usuario
 const comprasArray = JSON.parse(localStorage.getItem('comprasRealizadas'))
-let comprasUser = comprasArray.filter(user => user.comprador === sesionArray.email)
-console.log(comprasUser[0]);
-console.log(comprasUser[2])
-var count = Object.keys(comprasUser).length;
-
+console.log(comprasArray == null)
+if (comprasArray == null){
+    console.log("  entro a if");
+    var count = 0 
+}else{
+    console.log("entro a else ");
+    var comprasUser = comprasArray.filter(user => user.comprador === sesionArray.email)
+    var count = Object.keys(comprasUser).length;   
+}
 
 let contenedorCompras = `
 <div class="contenedorCompras">
