@@ -491,6 +491,12 @@ header li {
         grid-gap: 30px;
         padding: 35px 0px;
     }
+    .container{
+        padding: 2%;
+    }
+    .caja{
+        width: 100%;
+    }
 }
 
 
