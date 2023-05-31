@@ -56,6 +56,14 @@ elementoValorBoletosAA.appendChild(contenidoValorBoletosAA)
 
 //funcion de boton comprar
 function comprarAA() {
+    // Valida que un usuario esté logeado para poder comprar
+    if(sessionStorage.getItem('sesionActiva') == "[true]"){
+        console.log("autorizado");
+    } else{
+        window.location.href = 'login.html'
+    }
+
+
     var empresa = "Aerolineas_Arg"
     const users = JSON.parse(localStorage.getItem('users')) 
     const detalles_compra = JSON.parse(localStorage.getItem('comprasRealizadas')) || []
@@ -69,6 +77,14 @@ function comprarAA() {
     alert("¡Compraste un pasaje!")
 }
 function comprarLat() {
+    // Valida que un usuario esté logeado para poder comprar
+    if(sessionStorage.getItem('sesionActiva') == "[true]"){
+        console.log("autorizado");
+    } else{
+        window.location.href = 'login.html'
+    }
+
+
     var empresa = "Latam"
     const users = JSON.parse(localStorage.getItem('users')) 
     const detalles_compra = JSON.parse(localStorage.getItem('comprasRealizadas')) || []
