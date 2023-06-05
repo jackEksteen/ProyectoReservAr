@@ -1,5 +1,5 @@
 # ProyectoReservAr
-Trabajo Práctico "grupal". "Codo a Codo" COM 23027
+Trabajo Práctico "Codo a Codo" COM 23027
 
 Bueno profe, esta es la página. Tuve el imprevisto de quedarme solo a 25 días de entregar el trabajo y tener que empezar a hacer ENTERAMENTE a las apuradas un proyecto que en primera instancia ni lo había sugerido yo. Pero bueno, más alla de eso le metí mucho esfuerzo y aprendí bastante de JS ya que estaba oxidado con la programación. 
 Traté de comentar toda la información que me parecía relevante (más que nada en los JS), igualmente a continuación dejo algunas descripciones sobre el proyecto:
